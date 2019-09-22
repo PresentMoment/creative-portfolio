@@ -1,13 +1,266 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Cormorant&display=swap");
+
+* {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* p {
+  font-family: "Cormorant", serif;
+}
+
+.header {
+  cursor: pointer;
+  border: solid 1px #f2f2f2;
+  padding: 15px;
+  background-color: #9b9b9bd3;
+  color: #fff;
+  font-family: "Cormorant", serif;
+}
+
+.content {
+  cursor: pointer;
+  background-color: #fff;
+  border-left: solid 1px #f2f2f2;
+  border-bottom: solid 1px #f2f2f2;
+  padding: 15px;
+  font-size: 14px;
+  width: 100%;
+  font-family: "Cormorant", serif;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar #home {
+  text-align: center;
+}
+
+.navButton {
+  width: 50px;
+  animation: rotation 10s infinite linear;
+  margin-left: 5vw;
+  position: fixed;
+  display: flex;
+  top: 90px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.em-container {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.em-image1 img {
+  min-height: 100%;
+  min-width: 600px;
+  width: 70%;
+  height: auto;
+  top: 0;
+  left: 0;
+  max-width: 1200px;
+  display: inline-flex;
+}
+
+.em-text {
+  font-family: "Cormorant", serif;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.em-image2 img {
+  min-width: 600px;
+  width: 70%;
+  height: auto;
+  float: right;
+
+  max-width: 1200px;
+  max-height: 902px;
+  display: inline-flex;
+}
+
+.butw {
+  margin-left: 6em;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 790px) {
+  .butw {
+    flex-direction: column-reverse;
+  }
+}
+
+.butw-text {
+  font-family: "Cormorant", serif;
+  text-align: right;
+  width: 30%;
+  padding-right: 2em;
+}
+
+@media (max-width: 790px) {
+  .butw-text {
+    width: 100%;
+  }
+}
+
+.butw-img img {
+  width: 100%;
+  max-width: 999px;
+}
+
+.soundCloud {
+  overflow: hidden;
+  padding-top: 2em;
+}
+
+.blanche-txt {
+  font-family: "Cormorant", serif;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+}
+
+.blanche-img {
+  min-height: 100%;
+  min-width: 700px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+}
+
+.video {
+  margin: 0 auto;
+  margin-left: 10%;
+}
+
+.monuments {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+
+@media (max-width: 1200px) {
+  .monuments {
+    flex-direction: column;
+  }
+}
+
+.monument-text {
+  position: relative;
+  width: 50%;
+  top: 0;
+  padding: 0 1em 0 2em;
+}
+@media (max-width: 1200px) {
+  .monument-text {
+    max-width: 90vw;
+    min-width: 70vw;
+    padding: 0 1em 0 0em;
+  }
+}
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+}
+@media (max-width: 1200px) {
+  .welcome {
+    flex-direction: column;
+    margin-left: 12%;
+  }
+}
+
+.welcome-text {
+  position: relative;
+  width: 50%;
+  top: 0;
+  padding: 0 1em 0 2em;
+}
+@media (max-width: 1200px) {
+  .welcome-text {
+    max-width: 90vw;
+    min-width: 70vw;
+    padding: 0 1em 0 0em;
+  }
+}
+
+.guide {
+  display: flex;
+  flex-direction: row;
+}
+
+.guide-text {
+  margin-left: 10%;
+}
+
+.imgButton img {
+  max-width: 300px;
+  float: right;
+  z-index: -1;
+}
+
+.button-container {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.imgButton {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.imgButton:hover {
+  opacity: 0.5;
+}
+
+.guideButton:hover ~ .imgButton {
+  opacity: 0.5;
+}
+
+.imgFlip {
+  background-color: rgb(85, 85, 85);
+}
+
+.guideButton button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.contact {
+  margin-left: 10%;
+}
+
+.contact a {
+  cursor: pointer;
 }
