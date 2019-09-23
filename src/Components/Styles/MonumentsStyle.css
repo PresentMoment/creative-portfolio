@@ -1,0 +1,40 @@
+.monuments {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 1200px) {
+  .monuments {
+    flex-direction: column;
+  }
+}
+
+.monumentsScreen {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 1200px) {
+  .monumentsScreen {
+    flex-direction: column;
+  }
+}
+
+.monument-text {
+  position: relative;
+  width: 50%;
+  top: 0;
+  padding: 0 1em 0 2em;
+}
+@media (max-width: 1200px) {
+  .monument-text {
+    max-width: 90vw;
+    min-width: 70vw;
+    padding: 0 1em 0 0em;
+  }
+}

@@ -7,7 +7,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div className={this.props.sidebarOpen ? "contactScreen" : "contact"}>
-        <p className="address">
+        <p>
           <span>Robert Girardin</span>
           <br />
           <span>

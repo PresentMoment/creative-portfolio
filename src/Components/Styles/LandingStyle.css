@@ -30,3 +30,15 @@
   position: absolute;
   z-index: -1;
 }
+
+#tagBefore {
+  color: #000;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+#tagAfter {
+  color: rgb(167, 167, 167);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}

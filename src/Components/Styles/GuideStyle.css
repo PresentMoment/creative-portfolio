@@ -1,0 +1,64 @@
+.guide {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.guideScreen {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.guide-text {
+  margin-left: 10%;
+}
+
+.imgButton img {
+  max-width: 300px;
+  float: right;
+  z-index: -1;
+}
+
+.button-container {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.imgButton {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+
+.imgButton:hover {
+  opacity: 0.5;
+}
+
+.guideButton:hover ~ .imgButton {
+  opacity: 0.5;
+}
+
+.imgFlip {
+  background-color: rgb(85, 85, 85);
+}
+
+.guideButton button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+}

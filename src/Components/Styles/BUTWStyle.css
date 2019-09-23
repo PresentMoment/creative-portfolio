@@ -1,0 +1,49 @@
+.butw {
+  margin-left: 6em;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 790px) {
+  .butw {
+    flex-direction: column-reverse;
+  }
+}
+
+.butwScreen {
+  margin-left: 6em;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 790px) {
+  .butwScreen {
+    flex-direction: column-reverse;
+  }
+}
+
+.butw-text {
+  font-family: "Cormorant", serif;
+  text-align: right;
+  width: 30%;
+  padding-right: 2em;
+}
+
+@media (max-width: 790px) {
+  .butw-text {
+    width: 100%;
+  }
+}
+
+.butw-img img {
+  width: 100%;
+  max-width: 999px;
+}
+
+.soundCloud {
+  overflow: hidden;
+  padding-top: 2em;
+}

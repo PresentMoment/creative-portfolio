@@ -9,7 +9,7 @@ class MusicNav extends React.Component {
   render() {
     return (
       <div>
-        <ul onClick={this.props.clickFunction}>
+        <ul onClick={this.props.clickFunction} className="navUL">
           <Link to={"/emmusic"}>
             <li>Emotional Music</li>
           </Link>

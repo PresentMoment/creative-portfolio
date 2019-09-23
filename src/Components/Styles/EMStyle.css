@@ -1,0 +1,43 @@
+.em {
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.emScreen {
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.em-container {
+  display: inline-flex;
+  flex-direction: row;
+}
+@media (max-width: 1000px) {
+  .em-container {
+    flex-direction: column;
+  }
+}
+
+.em-image1 img {
+  max-width: 700px;
+}
+@media (max-width: 1000px) {
+  .em-image1 img {
+    max-width: 600px;
+  }
+}
+
+.em-text {
+  font-family: "Cormorant", serif;
+  text-align: left;
+  margin-top: 10%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media (max-width: 1000px) {
+  .em-text {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}

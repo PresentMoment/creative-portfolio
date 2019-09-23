@@ -9,7 +9,7 @@ class VideoNav extends React.Component {
   render() {
     return (
       <div>
-        <ul onClick={this.props.clickFunction}>
+        <ul onClick={this.props.clickFunction} className="navUL">
           <Link to={"/mooc"}>
             <li>The Monuments of Orange County</li>
           </Link>

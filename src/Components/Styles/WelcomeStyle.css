@@ -1,0 +1,46 @@
+.welcome {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 1200px) {
+  .welcome {
+    flex-direction: column;
+    margin-left: 12%;
+  }
+}
+
+.welcomeScreen {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+@media (max-width: 1200px) {
+  .welcomeScreen {
+    flex-direction: column;
+    margin-left: 12%;
+  }
+}
+
+.welcome-text {
+  position: relative;
+  width: 50%;
+  top: 0;
+  padding: 0 1em 0 2em;
+}
+@media (max-width: 1200px) {
+  .welcome-text {
+    max-width: 90vw;
+    min-width: 70vw;
+    padding: 0 1em 0 0em;
+  }
+}
+
+#welcomePop {
+  cursor: pointer;
+}

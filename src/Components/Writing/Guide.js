@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../Styles/GuideStyle.css";
 
 export default class Guide extends Component {
   constructor(props) {

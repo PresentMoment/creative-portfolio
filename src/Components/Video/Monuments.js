@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import VimeoPlayer from "react-player";
+import "../Styles/MonumentsStyle.css";
 
 export default class Monuments extends Component {
   constructor(props) {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../Styles/BlancheStyle.css";
 
 export default class Blanche extends Component {
   render() {
