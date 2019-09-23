@@ -125,15 +125,63 @@ class App extends React.Component {
                 <Landing {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
-            <Route exact path="/emmusic" component={EMMusic} />
-            <Route exact path="/butw" component={BUTW} />
+            <Route
+              exact
+              path="/emmusic"
+              render={props => (
+                <EMMusic {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/butw"
+              render={props => (
+                <BUTW {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
             <Route exact path="/blanche" component={Blanche} />
-            <Route exact path="/diced" component={Diced} />
-            <Route exact path="/mooc" component={Monuments} />
-            <Route exact path="/wth" component={Welcome} />
-            <Route exact path="/white" component={White} />
-            <Route exact path="/guide" component={Guide} />
-            <Route exact path="/contact" component={Contact} />
+            <Route
+              exact
+              path="/diced"
+              render={props => (
+                <Diced {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/mooc"
+              render={props => (
+                <Monuments {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/wth"
+              render={props => (
+                <Welcome {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/white"
+              render={props => (
+                <White {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/guide"
+              render={props => (
+                <Guide {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/contact"
+              render={props => (
+                <Contact {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
           </Switch>
         </div>
       </Router>

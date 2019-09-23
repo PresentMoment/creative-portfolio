@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class Guide extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="guide">
+      <div className={this.props.sidebarOpen ? "guideScreen" : "guide"}>
         <div className="guide-text">
           <p>
             Full length book investigating the social and mental consequences of

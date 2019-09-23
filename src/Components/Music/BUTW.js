@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import ReactPlayer from "react-player";
 
 export default class BUTW extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="butw">
+      <div className={this.props.sidebarOpen ? "butwScreen" : "butw"}>
         <div className="butw-text">
           <h3>
             "Equal Release" by Zero Grow (Robert Girardin and Elon Katz)

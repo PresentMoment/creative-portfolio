@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import VimeoPlayer from "react-player";
 
 export default class Monuments extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="monuments">
+      <div className={this.props.sidebarOpen ? "monumentsScreen" : "monuments"}>
         <div className="monument-vid">
           <VimeoPlayer url="https://vimeo.com/198787549" />
         </div>

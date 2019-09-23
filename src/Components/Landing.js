@@ -9,15 +9,11 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="nameTag">
-          <h3
-            style={{
-              color: this.props.sidebarOpen ? "lightgrey" : "#000"
-            }}
-          >
+          <h3 id={this.props.sidebarOpen ? "tagAfter" : "tagBefore"}>
             is a musician, film maker and writer living in Germany
           </h3>
         </div>
-        <div className="name">
+        <div className={this.props.sidebarOpen ? "name" : "nameAfter"}>
           <h1>RobertGirardin</h1>
         </div>
       </div>

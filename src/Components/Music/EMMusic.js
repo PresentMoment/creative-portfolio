@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class EMMusic extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="em">
+      <div className={this.props.sidebarOpen ? "emScreen" : "em"}>
         <div className="em-container">
           <div className="em-image1">
             <img src="/images/emmusic1.jpg" alt="" />
@@ -14,7 +17,7 @@ export default class EMMusic extends Component {
               Girardin
             </p>
             <p>
-              Label art from{" "}
+              Label art by{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,12 +52,10 @@ export default class EMMusic extends Component {
               <p>Purchase Vinyl/Digital</p>
             </a>
           </div>
-          <div className="em-image2">
-            <img src="/images/emmusic2.jpg" alt="" />
-          </div>
         </div>
         <iframe
-          style={{ border: 0, width: "100%", height: "120px" }}
+          title="em"
+          style={{ border: 0, width: "600px", height: "120px" }}
           src="https://bandcamp.com/EmbeddedPlayer/album=2215300614/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
           seamless
         />

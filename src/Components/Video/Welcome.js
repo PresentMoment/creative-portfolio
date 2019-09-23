@@ -25,7 +25,7 @@ export default class Welcome extends Component {
   }
   render() {
     return (
-      <div className="welcome">
+      <div className={this.props.sidebarOpen ? "welcomeScreen" : "welcome"}>
         <div className="player-wrapper">
           <YouTubePlayer url="https://youtu.be/KpEU0OGpDr0" />
         </div>
@@ -41,7 +41,7 @@ export default class Welcome extends Component {
             of stairwells, parking lots, construction sites and public schools.
           </p>
           <div onClick={e => this.toggleHunt(e)}>
-            <h3>The Hunt</h3>
+            <h3 id="welcomePop">The Hunt</h3>
           </div>
           {this.state.hunt ? (
             <div>
@@ -60,7 +60,7 @@ export default class Welcome extends Component {
             </div>
           ) : null}
           <div onClick={e => this.toggleCamera(e)}>
-            <h3>The Camera</h3>
+            <h3 id="welcomePop">The Camera</h3>
           </div>
           {this.state.camera ? (
             <div>
@@ -88,7 +88,7 @@ export default class Welcome extends Component {
             </div>
           ) : null}
           <div onClick={e => this.toggleTitle(e)}>
-            <h3>The Title</h3>
+            <h3 id="welcomePop">The Title</h3>
           </div>
           {this.state.title ? (
             <div>

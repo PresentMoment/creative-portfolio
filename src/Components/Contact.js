@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="contact">
+      <div className={this.props.sidebarOpen ? "contactScreen" : "contact"}>
         <p className="address">
           <span>Robert Girardin</span>
           <br />
