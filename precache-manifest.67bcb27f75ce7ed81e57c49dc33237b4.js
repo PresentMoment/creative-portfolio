@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed8660734df02da8e56e0981bb221a0b",
+    "revision": "5ca182c58a334a7895c015cbee67baa0",
     "url": "https://presentmoment.github.io/artist/index.html"
   },
   {
-    "revision": "cad13bb025cc24ddad10",
+    "revision": "ae34239e9b692832a0a3",
     "url": "https://presentmoment.github.io/artist/static/css/main.4634670a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://presentmoment.github.io/artist/static/js/2.4bee250b.chunk.js"
   },
   {
-    "revision": "cad13bb025cc24ddad10",
-    "url": "https://presentmoment.github.io/artist/static/js/main.bea503fa.chunk.js"
+    "revision": "ae34239e9b692832a0a3",
+    "url": "https://presentmoment.github.io/artist/static/js/main.1203bf81.chunk.js"
   },
   {
     "revision": "6aa1874d2ea196d6aef6",
