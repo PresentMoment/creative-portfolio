@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     let buttonStyle = {};
-    if (this.state.sidebarOpen) {
+    if (this.props.sidebarOpen) {
       buttonStyle = {
         left: "20vw",
         transition: "transform .2s ease-out",
@@ -21,14 +21,14 @@ export default class NavBar extends Component {
           sidebar={
             <div className="navbar">
               <Collapsible title="Music">
-                <MusicNav clickFunction={this.navCollapse} />
+                <MusicNav clickFunction={this.props.navCollapse} />
               </Collapsible>
               <Collapsible title="Video">
-                <VideoNav clickFunction={this.navCollapse} />
+                <VideoNav clickFunction={this.props.navCollapse} />
               </Collapsible>
               <Collapsible title="Writings">
                 <Link to="/guide">
-                  <div onClick={this.navCollapse}>
+                  <div onClick={this.props.navCollapse}>
                     <ul className="navUL">
                       <li>
                         <p>Orange County Travel Guide</p>
@@ -38,12 +38,12 @@ export default class NavBar extends Component {
                 </Link>
               </Collapsible>
               <Link to="/">
-                <p id="home" onClick={this.navCollapse}>
+                <p id="home" onClick={this.props.navCollapse}>
                   Home
                 </p>
               </Link>
               <Link to="/contact">
-                <p id="home" onClick={this.navCollapse}>
+                <p id="home" onClick={this.props.navCollapse}>
                   Contact
                 </p>
               </Link>
@@ -56,8 +56,8 @@ export default class NavBar extends Component {
               </a>
             </div>
           }
-          open={this.state.sidebarOpen}
-          onSetOpen={this.onSetSidebarOpen}
+          open={this.props.sidebarOpen}
+          onSetOpen={this.props.onSetSidebarOpen}
           shadow={false}
           styles={{
             sidebar: {
@@ -86,7 +86,7 @@ export default class NavBar extends Component {
           <div>
             <img
               className="navButton"
-              onClick={() => this.onSetSidebarOpen(true)}
+              onClick={() => this.props.onSetSidebarOpen(true)}
               style={buttonStyle}
               src="/images/recycle.png"
               alt=""

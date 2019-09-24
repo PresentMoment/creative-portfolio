@@ -34,7 +34,11 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <NavBar />
+          <NavBar
+            navCollapse={this.navCollapse}
+            sidebarOpen={this.state.sidebarOpen}
+            onSetSidebarOpen={this.onSetSidebarOpen}
+          />
           <Switch>
             <Route
               exact
