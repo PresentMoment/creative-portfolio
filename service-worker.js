@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://presentmoment.github.io/artist/precache-manifest.d7629f0c7602364813947ae3b384c86d.js"
+  "https://presentmoment.github.io/artist/precache-manifest.5019ce5be124dbd21306400f60eee5c3.js"
 );
 
 self.addEventListener('message', (event) => {
