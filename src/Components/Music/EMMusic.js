@@ -10,7 +10,7 @@ export default class EMMusic extends Component {
       <div className={this.props.sidebarOpen ? "emScreen" : "em"}>
         <div className="em-container">
           <div className="em-image1">
-            <img src="/images/emmusic1.jpg" alt="" />
+            <img src="images/emmusic1.jpg" alt="" />
           </div>
           <div className="em-text">
             <p>
@@ -56,7 +56,7 @@ export default class EMMusic extends Component {
         </div>
         <iframe
           title="em"
-          style={{ border: 0, width: "600px", height: "120px" }}
+          style={{ border: 0, width: "100%", height: "120px" }}
           src="https://bandcamp.com/EmbeddedPlayer/album=2215300614/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
           seamless
         />

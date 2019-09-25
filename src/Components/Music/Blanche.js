@@ -29,9 +29,9 @@ export default class Blanche extends Component {
           </p>
         </div>
         <div className="blanche-img">
-          <img src="/images/blanche1.jpg" alt="" />
-          <img src="/images/blanche2.jpg" alt="" />
-          <img src="/images/blanche3.jpg" alt="" />
+          <img src="images/blanche1.jpg" alt="" />
+          <img src="images/blanche2.jpg" alt="" />
+          <img src="images/blanche3.jpg" alt="" />
         </div>
       </div>
     );

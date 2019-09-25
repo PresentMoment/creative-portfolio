@@ -36,7 +36,7 @@ export default class BUTW extends Component {
           </div>
         </div>
         <div className="butw-img">
-          <img src="/images/butw2.png" alt="" />
+          <img src="images/butw2.png" alt="" />
         </div>
       </div>
     );

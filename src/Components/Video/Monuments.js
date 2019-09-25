@@ -10,7 +10,10 @@ export default class Monuments extends Component {
     return (
       <div className={this.props.sidebarOpen ? "monumentsScreen" : "monuments"}>
         <div className="monument-vid">
-          <VimeoPlayer url="https://vimeo.com/198787549" />
+          <VimeoPlayer
+            className="videoPlayer"
+            url="https://vimeo.com/198787549"
+          />
         </div>
 
         <div className="monument-text">

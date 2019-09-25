@@ -28,10 +28,13 @@ export default class Welcome extends Component {
     return (
       <div className={this.props.sidebarOpen ? "welcomeScreen" : "welcome"}>
         <div className="player-wrapper">
-          <YouTubePlayer url="https://youtu.be/KpEU0OGpDr0" />
+          <YouTubePlayer
+            className="videoPlayer"
+            url="https://youtu.be/KpEU0OGpDr0"
+          />
         </div>
         <div className="welcome-text">
-          <h3>Welcome To Hell</h3>
+          <h3 id="welcomeHead">Welcome To Hell</h3>
           <p>
             Welcome To Hell is a skate video without any skateboarding. It
             utilizes the vernacular of skate videos (quick repetitive cuts,

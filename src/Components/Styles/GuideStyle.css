@@ -4,6 +4,12 @@
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
+@media (max-width: 600px) {
+  .guide {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 
 .guideScreen {
   display: flex;
@@ -12,6 +18,12 @@
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
+@media (max-width: 600px) {
+  .guideScreen {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 
 .guide-text {
   margin-left: 10%;
@@ -19,8 +31,6 @@
 
 .imgButton img {
   max-width: 300px;
-  float: right;
-  z-index: -1;
 }
 
 .button-container {
@@ -30,7 +40,6 @@
 }
 
 .imgButton {
-  position: relative;
   width: 300px;
   height: 100%;
 }

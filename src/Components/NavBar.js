@@ -61,9 +61,9 @@ export default class NavBar extends Component {
           shadow={false}
           styles={{
             sidebar: {
-              background: "rgba(0,0,0,0.1)",
+              background: "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0)",
               width: "20vw",
-              height: "100%",
+              height: "100vh",
               transition: "transform .3s ease-out",
               WebkitTransition: "-webkit-transform .3s ease-out",
               willChange: "transform",
@@ -88,7 +88,7 @@ export default class NavBar extends Component {
               className="navButton"
               onClick={() => this.props.onSetSidebarOpen(true)}
               style={buttonStyle}
-              src="/images/recycle.png"
+              src="images/recycle.png"
               alt=""
             />
           </div>

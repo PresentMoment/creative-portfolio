@@ -104,3 +104,15 @@
 .contact a {
   cursor: pointer;
 }
+
+@media (max-width: 730px) {
+  .videoPlayer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .videoPlayer {
+    width: 200px;
+  }
+}

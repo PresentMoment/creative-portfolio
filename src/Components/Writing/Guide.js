@@ -22,7 +22,7 @@ export default class Guide extends Component {
             </a>
           </div>
           <div className="imgButton">
-            <img src="/images/guide.jpg" alt="" />
+            <img src="images/guide.jpg" alt="" />
           </div>
         </div>
       </div>

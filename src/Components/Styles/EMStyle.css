@@ -24,7 +24,12 @@
 }
 @media (max-width: 1000px) {
   .em-image1 img {
-    max-width: 600px;
+    max-width: 550px;
+  }
+}
+@media (max-width: 425px) {
+  .em-image1 img {
+    max-width: 300px;
   }
 }
 

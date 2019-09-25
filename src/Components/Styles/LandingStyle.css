@@ -5,11 +5,13 @@
   font-family: "EB Garamond", serif;
   font-size: 8em;
   overflow-wrap: break-word;
+  background: linear-gradient(#eee, #333);
+  background-clip: text;
+  transition: all 0.6s ease;
+  background: -moz-linear-gradient(#eee, #333);
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 0;
-  transition: all 0.6s ease;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
   -webkit-transition: all 0.6s ease;
 }
 
@@ -17,12 +19,20 @@
   font-family: "EB Garamond", serif;
   font-size: 8em;
   overflow-wrap: break-word;
+  background: -moz-linear-gradient(#eee, rgb(41, 170, 255));
   background: -webkit-linear-gradient(#eee, rgb(41, 170, 255));
+  background: linear-gradient(#eee, rgb(41, 170, 255));
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 0;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
   transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
+}
+
+@media (max-width: 600px) {
+  .name .nameAfter {
+    font-size: 3em;
+  }
 }
 
 .nameTag {
