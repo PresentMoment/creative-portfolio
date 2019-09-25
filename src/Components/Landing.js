@@ -13,7 +13,7 @@ export default class Landing extends Component {
             is a musician, film maker and writer living in Germany
           </h3>
         </div>
-        <div className={this.props.sidebarOpen ? "name" : "nameAfter"}>
+        <div className={this.props.sidebarOpen ? "nameAfter" : "name"}>
           <h1>RobertGirardin</h1>
         </div>
       </div>

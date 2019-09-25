@@ -11,7 +11,11 @@ export default class White extends Component {
         <div className="white-text">
           <p>Music video for 'Covered In White' by Jaws (Hundebiss, Milan)</p>
         </div>
-        <ReactPlayer className="videoPlayer" url="https://vimeo.com/44297911" />
+        <ReactPlayer
+          className="videoPlayer"
+          url="https://vimeo.com/44297911"
+          playing
+        />
       </div>
     );
   }

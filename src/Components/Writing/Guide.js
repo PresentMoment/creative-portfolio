@@ -13,6 +13,9 @@ export default class Guide extends Component {
             Full length book investigating the social and mental consequences of
             Orange County, California.
             <br /> Presented as a travel guide.
+            <br />
+            114 pages
+            <br /> All text and photos by Robert Girardin
           </p>
         </div>
         <div className="button-container">

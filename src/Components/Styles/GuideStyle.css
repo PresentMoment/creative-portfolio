@@ -28,6 +28,11 @@
 .guide-text {
   margin-left: 10%;
 }
+@media (max-width: 600px) {
+  .guide-text {
+    text-align: right;
+  }
+}
 
 .imgButton img {
   max-width: 300px;

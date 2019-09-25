@@ -17,3 +17,17 @@
   flex-direction: row;
   z-index: -1;
 }
+@media (max-width: 790px) {
+  .blanche-img {
+    min-height: 100%;
+    min-width: 700px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: -300px;
+    left: -50px;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+  }
+}

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   margin-left: 10%;
-  width: 100%;
+  width: auto;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
@@ -27,14 +27,12 @@
 }
 
 .monument-text {
-  position: relative;
-  width: 50%;
+  width: auto;
   top: 0;
   padding: 0 1em 0 2em;
 }
 @media (max-width: 1200px) and (min-width: 801px) {
   .monument-text {
-    width: 65%;
     padding: 0 1em 0 0em;
   }
 }

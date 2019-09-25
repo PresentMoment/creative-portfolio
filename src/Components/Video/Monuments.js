@@ -13,6 +13,7 @@ export default class Monuments extends Component {
           <VimeoPlayer
             className="videoPlayer"
             url="https://vimeo.com/198787549"
+            playing
           />
         </div>
 
