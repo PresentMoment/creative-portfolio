@@ -13,7 +13,7 @@
     background: linear-gradient(#eee, #333);
     background-clip: text;
     -webkit-background-clip: text;
-    color: rgba(255, 255, 255, 0);
+    color: rgb(233, 233, 233);
     -webkit-transition: all 0.6s ease;
   }
 }
@@ -28,26 +28,30 @@
     background: linear-gradient(#eee, rgb(41, 170, 255));
     background-clip: text;
     -webkit-background-clip: text;
-    color: rgba(255, 255, 255, 0);
+    color: linear-gradient(#eee, rgb(41, 170, 255));
     transition: all 0.6s ease;
     -webkit-transition: all 0.6s ease;
   }
 }
 
 @media only screen and (max-width: 870px) {
-  .name {
-    font-family: "EB Garamond", serif;
-    font-size: 4em;
-    overflow-wrap: break-word;
-    color: rgb(167, 167, 167);
-  }
-}
-@media only screen and (max-width: 870px) {
   .nameAfter {
     font-family: "EB Garamond", serif;
     font-size: 4em;
     overflow-wrap: break-word;
+    color: rgb(167, 167, 167);
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .name {
+    font-family: "EB Garamond", serif;
+    font-size: 4em;
+    overflow-wrap: break-word;
     color: #000;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
   }
 }
 
