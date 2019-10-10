@@ -11,6 +11,10 @@ import White from "./Components/Video/White";
 import Guide from "./Components/Writing/Guide";
 import Contact from "./Components/Contact";
 import NavBar from "./Components/NavBar";
+import Stress from "./Components/Music/StressTest";
+import Keys from "./Components/Music/Keys";
+import DicedRecord from "./Components/Music/Diced";
+import ObjectDom from "./Components/Music/Object";
 
 class App extends React.Component {
   constructor(props) {
@@ -52,6 +56,34 @@ class App extends React.Component {
               path="/emmusic"
               render={props => (
                 <EMMusic {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/stress"
+              render={props => (
+                <Stress {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/keys"
+              render={props => (
+                <Keys {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/dicedrecord"
+              render={props => (
+                <DicedRecord {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/objectdom"
+              render={props => (
+                <ObjectDom {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route

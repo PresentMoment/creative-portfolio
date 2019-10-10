@@ -1,0 +1,50 @@
+.stress {
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.stressScreen {
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.stress-container {
+  display: inline-flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .stress-container {
+    flex-direction: column;
+    margin-left: 5em;
+  }
+}
+
+.stress-image1 img {
+  max-height: 700px;
+}
+@media (max-width: 1000px) {
+  .stress-image1 img {
+    max-width: 550px;
+  }
+}
+@media (max-width: 425px) {
+  .stress-image1 img {
+    max-height: 300px;
+  }
+}
+
+.stress-text {
+  font-family: "Cormorant", serif;
+  text-align: left;
+  min-width: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+@media (max-width: 768px) {
+  .stress-text {
+    width: 550px;
+    margin-top: 0;
+    padding-left: 0;
+  }
+}

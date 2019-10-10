@@ -60,25 +60,20 @@ export default class NavBar extends Component {
           onSetOpen={this.props.onSetSidebarOpen}
           shadow={false}
           styles={{
+            root: {
+              position: undefined,
+              width: "20vw"
+            },
             sidebar: {
               background: "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0)",
               width: "20vw",
-              height: "100vh",
-              transition: "transform .3s ease-out",
-              WebkitTransition: "-webkit-transform .3s ease-out",
-              willChange: "transform",
-              overflow: "auto"
+              height: "100vh"
+            },
+            content: {
+              // {sidebarOpen ? -1 : null} would like to have z-index value dependent on this ternary
+              zIndex: null
             },
             overlay: {
-              zIndex: 1,
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              opacity: 0,
-              visibility: "hidden",
-              transition: "opacity .3s ease-out, visibility .3s ease-out",
               backgroundColor: "rgba(0,0,0,0)"
             }
           }}
@@ -88,7 +83,7 @@ export default class NavBar extends Component {
               className="navButton"
               onClick={() => this.props.onSetSidebarOpen(true)}
               style={buttonStyle}
-              src="images/recycle.png"
+              src="images/recycle2.png"
               alt=""
             />
           </div>
