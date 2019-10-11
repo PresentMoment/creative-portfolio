@@ -7,14 +7,15 @@
     font-size: 8em;
     overflow-wrap: break-word;
     background-clip: text;
-    transition: all 0.6s ease;
+    transition: all 0.9s ease;
     background: -moz-linear-gradient(#eee, #333);
     background: -webkit-linear-gradient(#eee, #333);
-    background: linear-gradient(#eee, #333);
+    background: linear-gradient(#eee, rgb(0, 0, 0));
     background-clip: text;
     -webkit-background-clip: text;
-    color: rgb(233, 233, 233);
-    -webkit-transition: all 0.6s ease;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
+    color: rgb(0, 0, 0);
+    -webkit-transition: all 0.9s ease;
   }
 }
 
@@ -28,9 +29,12 @@
     background: linear-gradient(#eee, rgb(41, 170, 255));
     background-clip: text;
     -webkit-background-clip: text;
-    color: linear-gradient(#eee, rgb(41, 170, 255));
-    transition: all 0.6s ease;
-    -webkit-transition: all 0.6s ease;
+    -webkit-text-fill-color: rgba(78, 16, 223, 0.2);
+    opacity: 1;
+    -webkit-opacity: 1;
+    color: black;
+    transition: all 0.9s ease;
+    -webkit-transition: all 0.9s ease;
   }
 }
 
