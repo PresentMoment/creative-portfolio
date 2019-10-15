@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     let buttonStyle = {};
+    const width = this.props.sidebarOpen ? "100%" : "20%";
     if (this.props.sidebarOpen) {
       buttonStyle = {
         left: "20vw",
@@ -70,8 +71,7 @@ export default class NavBar extends Component {
               height: "100vh"
             },
             content: {
-              // {sidebarOpen ? -1 : null} would like to have z-index value dependent on this ternary
-              zIndex: null
+              width
             },
             overlay: {
               backgroundColor: "rgba(0,0,0,0)"
