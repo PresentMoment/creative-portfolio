@@ -1,10 +1,21 @@
 import React, { Component } from "react";
 import "../Styles/EMStyle.css";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 export default class EMMusic extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loading: true
+    };
   }
+
+  hideSpinner = () => {
+    this.setState({
+      loading: false
+    });
+  };
   render() {
     return (
       <div className={this.props.sidebarOpen ? "emScreen" : "em"}>
@@ -54,9 +65,19 @@ export default class EMMusic extends Component {
             </a>
           </div>
         </div>
+        {this.state.loading ? (
+          <ScaleLoader
+            color={"#DCD9DA"}
+            css={`
+              align-self: center;
+            `}
+            width={136}
+          />
+        ) : null}
         <iframe
           title="em"
           style={{ border: 0, width: "100%", height: "120px" }}
+          onLoad={this.hideSpinner}
           src="https://bandcamp.com/EmbeddedPlayer/album=2215300614/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
           seamless
         />

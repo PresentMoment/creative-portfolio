@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import "../Styles/BUTWStyle.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default class BUTW extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loading: true
+    };
   }
+  hideSpinner = () => {
+    this.setState({
+      loading: false
+    });
+  };
   render() {
     return (
       <div className={this.props.sidebarOpen ? "butwScreen" : "butw"}>
@@ -32,7 +42,15 @@ export default class BUTW extends Component {
             </a>
           </h3>
           <div className="soundCloud">
-            <ReactPlayer url="https://soundcloud.com/blowinguptheworkshop/zerogrow" />
+            {this.state.loading ? (
+              <div className="loading">
+                <ClipLoader color={"#AEAEAE"} />
+              </div>
+            ) : null}
+            <ReactPlayer
+              onLoad={this.hideSpinner}
+              url="https://soundcloud.com/blowinguptheworkshop/zerogrow"
+            />
           </div>
         </div>
         <div className="butw-img">

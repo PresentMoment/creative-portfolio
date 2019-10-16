@@ -1,61 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cormorant&display=swap");
-
+.nameAfter {
+  font-family: "EB Garamond", serif;
+  overflow-wrap: break-word;
+  background-clip: text;
+  transition: all 0.9s ease;
+  background: -moz-linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(#eee, #333);
+  background: linear-gradient(#eee, rgb(0, 0, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  -webkit-transition: all 0.9s ease;
+}
+.name {
+  font-family: "EB Garamond", serif;
+  overflow-wrap: break-word;
+  background: -moz-linear-gradient(#eee, rgb(41, 170, 255));
+  background: -webkit-linear-gradient(#eee, rgb(41, 170, 255));
+  background: linear-gradient(#eee, rgb(41, 170, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(78, 16, 223, 0.2);
+  opacity: 1;
+  -webkit-opacity: 1;
+  color: black;
+  transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+}
 @media only screen and (min-width: 871px) {
   .nameAfter {
-    font-family: "EB Garamond", serif;
-    font-size: 8em;
-    overflow-wrap: break-word;
-    background-clip: text;
-    transition: all 0.9s ease;
-    background: -moz-linear-gradient(#eee, #333);
-    background: -webkit-linear-gradient(#eee, #333);
-    background: linear-gradient(#eee, rgb(0, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.3);
-    color: rgb(0, 0, 0);
-    -webkit-transition: all 0.9s ease;
+    font-size: 12em;
+    margin-top: -290px;
+    overflow: hidden;
+    height: 140vh;
   }
 }
 
 @media only screen and (min-width: 871px) {
   .name {
-    font-family: "EB Garamond", serif;
-    font-size: 8em;
-    overflow-wrap: break-word;
-    background: -moz-linear-gradient(#eee, rgb(41, 170, 255));
-    background: -webkit-linear-gradient(#eee, rgb(41, 170, 255));
-    background: linear-gradient(#eee, rgb(41, 170, 255));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(78, 16, 223, 0.2);
-    opacity: 1;
-    -webkit-opacity: 1;
-    color: black;
-    transition: all 0.9s ease;
-    -webkit-transition: all 0.9s ease;
+    font-size: 7em;
   }
 }
 
 @media only screen and (max-width: 870px) {
   .nameAfter {
-    font-family: "EB Garamond", serif;
-    font-size: 4em;
-    overflow-wrap: break-word;
-    color: rgb(167, 167, 167);
-    transition: all 0.6s ease;
-    -webkit-transition: all 0.6s ease;
+    font-size: 6em;
   }
 }
 @media only screen and (max-width: 870px) {
   .name {
-    font-family: "EB Garamond", serif;
     font-size: 4em;
-    overflow-wrap: break-word;
-    color: #000;
-    transition: all 0.6s ease;
-    -webkit-transition: all 0.6s ease;
   }
 }
 

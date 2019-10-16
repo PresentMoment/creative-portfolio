@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     let buttonStyle = {};
-    const width = this.props.sidebarOpen ? "100%" : "20%";
+    const width = this.props.sidebarOpen ? "100%" : "11%";
     if (this.props.sidebarOpen) {
       buttonStyle = {
         left: "20vw",
