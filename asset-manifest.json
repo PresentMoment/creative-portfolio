@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://presentmoment.github.io/artist/static/css/main.017b654b.chunk.css",
-    "main.js": "https://presentmoment.github.io/artist/static/js/main.b0a1a4db.chunk.js",
-    "main.js.map": "https://presentmoment.github.io/artist/static/js/main.b0a1a4db.chunk.js.map",
+    "main.css": "https://presentmoment.github.io/artist/static/css/main.e4d05a1a.chunk.css",
+    "main.js": "https://presentmoment.github.io/artist/static/js/main.d3208374.chunk.js",
+    "main.js.map": "https://presentmoment.github.io/artist/static/js/main.d3208374.chunk.js.map",
     "runtime~main.js": "https://presentmoment.github.io/artist/static/js/runtime~main.2ca4c324.js",
     "runtime~main.js.map": "https://presentmoment.github.io/artist/static/js/runtime~main.2ca4c324.js.map",
-    "static/js/2.b46ac76b.chunk.js": "https://presentmoment.github.io/artist/static/js/2.b46ac76b.chunk.js",
-    "static/js/2.b46ac76b.chunk.js.map": "https://presentmoment.github.io/artist/static/js/2.b46ac76b.chunk.js.map",
+    "static/js/2.e122e2da.chunk.js": "https://presentmoment.github.io/artist/static/js/2.e122e2da.chunk.js",
+    "static/js/2.e122e2da.chunk.js.map": "https://presentmoment.github.io/artist/static/js/2.e122e2da.chunk.js.map",
     "index.html": "https://presentmoment.github.io/artist/index.html",
-    "precache-manifest.8d5d005bf2f2ef6bb0a7e01b950aeae1.js": "https://presentmoment.github.io/artist/precache-manifest.8d5d005bf2f2ef6bb0a7e01b950aeae1.js",
+    "precache-manifest.88a849c1cb82bdaa1ef76e6ef68a456c.js": "https://presentmoment.github.io/artist/precache-manifest.88a849c1cb82bdaa1ef76e6ef68a456c.js",
     "service-worker.js": "https://presentmoment.github.io/artist/service-worker.js",
-    "static/css/main.017b654b.chunk.css.map": "https://presentmoment.github.io/artist/static/css/main.017b654b.chunk.css.map"
+    "static/css/main.e4d05a1a.chunk.css.map": "https://presentmoment.github.io/artist/static/css/main.e4d05a1a.chunk.css.map"
   }
 }
