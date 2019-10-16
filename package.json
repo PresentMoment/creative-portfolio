@@ -2,7 +2,7 @@
   "name": "collapse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://presentmoment.github.io/artist/",
+  "homepage": "https://presentmoment.github.io/creative-portfolio/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
@@ -21,7 +21,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "serve": "cross-env PUBLIC_URL=https://presentmoment.github.io/artist npm start",
+    "serve": "cross-env PUBLIC_URL=https://presentmoment.github.io/creative-portfolio/ npm start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

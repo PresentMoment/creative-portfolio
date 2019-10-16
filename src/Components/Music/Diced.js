@@ -23,7 +23,7 @@ export default class Diced extends Component {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://paltoflats.com/"
+                href="https://hundebissrecords.bigcartel.com/"
               >
                 Hundebiss
               </a>
