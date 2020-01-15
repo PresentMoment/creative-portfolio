@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "../Styles/ObjectStyle.css";
 
-export default class Object extends Component {
+export default class ObjectLP extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "objectScreen" : "object"}>
+      <div
+        className={this.props.sidebarOpen ? "objectScreen" : "objectNoScreen"}
+      >
         <div className="object-container">
           <div className="object-image1">
             <img src="images/objectfront.jpg" alt="" />

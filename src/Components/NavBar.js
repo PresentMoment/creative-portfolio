@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default class NavBar extends Component {
   render() {
     let buttonStyle = {};
-    const width = this.props.sidebarOpen ? "100%" : "11%";
+    const width = this.props.sidebarOpen ? "100%" : "19%";
     if (this.props.sidebarOpen) {
       buttonStyle = {
         left: "20vw",
@@ -26,6 +26,17 @@ export default class NavBar extends Component {
               </Collapsible>
               <Collapsible title="Video">
                 <VideoNav clickFunction={this.props.navCollapse} />
+              </Collapsible>
+              <Collapsible title="Photos">
+                <Link to="/apuana">
+                  <div onClick={this.props.navCollapse}>
+                    <ul className="navUL">
+                      <li>
+                        <p>Riviera Apuana</p>
+                      </li>
+                    </ul>
+                  </div>
+                </Link>
               </Collapsible>
               <Collapsible title="Writings">
                 <Link to="/guide">

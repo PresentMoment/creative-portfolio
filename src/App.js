@@ -14,7 +14,8 @@ import NavBar from "./Components/NavBar";
 import Stress from "./Components/Music/StressTest";
 import Keys from "./Components/Music/Keys";
 import DicedRecord from "./Components/Music/Diced";
-import ObjectDom from "./Components/Music/Object";
+import ObjectDom from "./Components/Music/ObjectLP";
+import Carrara from "./Components/Photos/Carrara";
 
 class App extends React.Component {
   constructor(props) {
@@ -134,6 +135,13 @@ class App extends React.Component {
               path="/contact"
               render={props => (
                 <Contact {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/apuana"
+              render={props => (
+                <Carrara {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
           </Switch>

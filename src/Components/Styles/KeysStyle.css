@@ -30,12 +30,12 @@
 }
 @media (max-width: 825px) {
   .keys-image1 img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 @media (max-width: 525px) {
   .keys-image1 img {
-    max-width: 300px;
+    max-width: 270px;
   }
 }
 .keys-image2 img {
@@ -48,12 +48,12 @@
 }
 @media (max-width: 825px) {
   .keys-image2 img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 @media (max-width: 525px) {
   .keys-image2 img {
-    max-width: 300px;
+    max-width: 270px;
   }
 }
 .keys-image3 img {
@@ -66,12 +66,12 @@
 }
 @media (max-width: 825px) {
   .keys-image3 img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 @media (max-width: 525px) {
   .keys-image3 img {
-    max-width: 300px;
+    max-width: 270px;
   }
 }
 
@@ -84,8 +84,9 @@
 }
 @media (max-width: 768px) {
   .keys-text {
-    width: 550px;
+    width: 270px;
     margin-top: 0;
     padding-left: 0;
+    margin-left: 0;
   }
 }

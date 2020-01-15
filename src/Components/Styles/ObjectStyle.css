@@ -1,4 +1,4 @@
-.object {
+.objectNoScreen {
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
@@ -30,12 +30,12 @@
 }
 @media (max-width: 1000px) {
   .object-image1 img {
-    max-width: 500px;
+    max-width: 350px;
   }
 }
 @media (max-width: 425px) {
   .object-image1 img {
-    max-width: 300px;
+    max-width: 270px;
   }
 }
 
@@ -47,10 +47,11 @@
   margin-right: 1em;
   margin-top: 10%;
 }
-@media (max-width: 700) {
+@media (max-width: 700px) {
   .object-text {
-    width: 550px;
+    width: 270px;
     margin-top: 0;
+    margin-left: 0;
     padding-left: 0;
   }
 }

@@ -25,12 +25,12 @@
 }
 @media (max-width: 768px) {
   .stress-image1 img {
-    max-width: 550px;
+    max-width: 350px;
   }
 }
 @media (max-width: 525px) {
   .stress-image1 img {
-    max-width: 400px;
+    max-width: 270px;
   }
 }
 
@@ -43,15 +43,16 @@
 }
 @media (max-width: 768px) {
   .stress-text {
-    width: 550px;
+    width: 350px;
     margin-top: 0;
     padding-left: 0;
   }
 }
 @media (max-width: 525px) {
   .stress-text {
-    width: 400px;
+    width: 270px;
     margin-top: 0;
+    margin-left: 0;
     padding-left: 0;
   }
 }
