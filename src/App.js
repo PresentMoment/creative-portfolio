@@ -10,18 +10,22 @@ import Welcome from "./Components/Video/Welcome";
 import White from "./Components/Video/White";
 import Guide from "./Components/Writing/Guide";
 import Contact from "./Components/Contact";
+import Development from "./Components/Development";
 import NavBar from "./Components/NavBar";
 import Stress from "./Components/Music/StressTest";
 import Keys from "./Components/Music/Keys";
 import DicedRecord from "./Components/Music/Diced";
 import ObjectDom from "./Components/Music/ObjectLP";
 import Carrara from "./Components/Photos/Carrara";
+import LaQuinta from "./Components/Photos/LaQuinta";
+import Promenade from "./Components/Music/Promenade";
+import Mixes from "./Components/Music/Mixes";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     this.navCollapse = this.navCollapse.bind(this);
@@ -48,49 +52,56 @@ class App extends React.Component {
             <Route
               exact
               path="/"
-              render={props => (
+              render={(props) => (
                 <Landing {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
+              path="/promenade"
+              render={(props) => (
+                <Promenade {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
               path="/emmusic"
-              render={props => (
+              render={(props) => (
                 <EMMusic {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/stress"
-              render={props => (
+              render={(props) => (
                 <Stress {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/keys"
-              render={props => (
+              render={(props) => (
                 <Keys {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/dicedrecord"
-              render={props => (
+              render={(props) => (
                 <DicedRecord {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/objectdom"
-              render={props => (
+              render={(props) => (
                 <ObjectDom {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/butw"
-              render={props => (
+              render={(props) => (
                 <BUTW {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
@@ -98,50 +109,71 @@ class App extends React.Component {
             <Route
               exact
               path="/diced"
-              render={props => (
+              render={(props) => (
                 <Diced {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/mooc"
-              render={props => (
+              render={(props) => (
                 <Monuments {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/wth"
-              render={props => (
+              render={(props) => (
                 <Welcome {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/white"
-              render={props => (
+              render={(props) => (
                 <White {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/guide"
-              render={props => (
+              render={(props) => (
                 <Guide {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
               path="/contact"
-              render={props => (
+              render={(props) => (
                 <Contact {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
             <Route
               exact
+              path="/dev"
+              render={(props) => (
+                <Development {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
               path="/apuana"
-              render={props => (
+              render={(props) => (
                 <Carrara {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/laquinta"
+              render={(props) => (
+                <LaQuinta {...props} sidebarOpen={this.state.sidebarOpen} />
+              )}
+            />
+            <Route
+              exact
+              path="/mixes"
+              render={(props) => (
+                <Mixes {...props} sidebarOpen={this.state.sidebarOpen} />
               )}
             />
           </Switch>

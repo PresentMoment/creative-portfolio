@@ -11,7 +11,7 @@ export default class Contact extends Component {
           <span>Robert Girardin</span>
           <br />
           <span>
-            tel: <a href="tel:+49 1762930116">+49 1762930116</a>
+            tel: <a href="tel:+1 (213) 769-3973">+1 (213) 769-3973</a>
           </span>
           <br />
           <span>

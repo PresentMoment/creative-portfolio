@@ -37,6 +37,15 @@ export default class NavBar extends Component {
                     </ul>
                   </div>
                 </Link>
+                <Link to="/laquinta">
+                  <div onClick={this.props.navCollapse}>
+                    <ul className="navUL">
+                      <li>
+                        <p>La Quinta</p>
+                      </li>
+                    </ul>
+                  </div>
+                </Link>
               </Collapsible>
               <Collapsible title="Writings">
                 <Link to="/guide">

@@ -29,7 +29,7 @@ export default class Carrara extends Component {
           display: "flex",
           flexGrow: 1,
           flexDirection: "column",
-          margin: "3em 3em 0 3em",
+          margin: "3em 1em 0 1em",
           height: "100%"
         }}
       >
@@ -53,7 +53,7 @@ export default class Carrara extends Component {
             is Viareggio, a seaside resort town and pleasure palace. Since the
             1980's the region has invested in errecting a number of public
             sculptures in its motorway roundabouts and public parks. In the
-            winter of 2020 I traveled to The Riviera Apuana is document the
+            winter of 2020 I traveled to The Riviera Apuana to document the
             artworks and their environments.
           </p>
         </div>

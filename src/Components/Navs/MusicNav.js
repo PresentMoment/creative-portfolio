@@ -10,6 +10,9 @@ class MusicNav extends React.Component {
     return (
       <div>
         <ul onClick={this.props.clickFunction} className="navUL">
+          <Link to={"/promenade"}>
+            <li>Promenade</li>
+          </Link>
           <Link to={"/emmusic"}>
             <li>Emotional Music</li>
           </Link>
@@ -30,6 +33,9 @@ class MusicNav extends React.Component {
           </Link>
           <Link to={"/objectdom"}>
             <li>Object Dom</li>
+          </Link>
+          <Link to={"/mixes"}>
+            <li>Mixes</li>
           </Link>
         </ul>
       </div>

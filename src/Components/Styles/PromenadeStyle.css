@@ -1,0 +1,48 @@
+.promenade {
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.promenadeScreen {
+  opacity: 0.3;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.promenade-container {
+  display: inline-flex;
+  flex-direction: row;
+}
+@media (max-width: 1000px) {
+  .promenade-container {
+    flex-direction: column;
+  }
+}
+
+.promenade-image1 img {
+  max-width: 700px;
+}
+@media (max-width: 1000px) {
+  .promenade-image1 img {
+    max-width: 550px;
+  }
+}
+@media (max-width: 425px) {
+  .promenade-image1 img {
+    max-width: 300px;
+  }
+}
+
+.promenade-text {
+  font-family: "Cormorant", serif;
+  text-align: left;
+  margin-top: 10%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media (max-width: 1000px) {
+  .promenade-text {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}

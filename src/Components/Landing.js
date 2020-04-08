@@ -10,7 +10,7 @@ export default class Landing extends Component {
       <div>
         <div className="nameTag">
           <h3 id={this.props.sidebarOpen ? "tagAfter" : "tagBefore"}>
-            is a musician, film maker and writer living in Germany
+            is a musician, film maker and writer living in Los Angeles
           </h3>
         </div>
         <div className={this.props.sidebarOpen ? "nameAfter" : "name"}>
