@@ -4,7 +4,7 @@
 }
 
 .promenadeScreen {
-  opacity: 0.3;
+  opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
@@ -13,9 +13,10 @@
   display: inline-flex;
   flex-direction: row;
 }
-@media (max-width: 1000px) {
+@media (max-width: 790px) {
   .promenade-container {
     flex-direction: column;
+    margin-left: 5em;
   }
 }
 

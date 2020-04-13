@@ -7,18 +7,18 @@ export default class EMMusic extends Component {
     super(props);
 
     this.state = {
-      loading: true
+      loading: true,
     };
   }
 
   hideSpinner = () => {
     this.setState({
-      loading: false
+      loading: false,
     });
   };
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "emScreen" : "em"}>
+      <div className={this.props.nav ? "emScreen" : "em"}>
         <div className="em-container">
           <div className="em-image1">
             <img src="images/emmusic1.jpg" alt="" />

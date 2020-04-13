@@ -1,3 +1,14 @@
+.blanche {
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.blancheScreen {
+  opacity: 0.06;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
 .blanche-txt {
   font-family: "Cormorant", serif;
   color: #fff;

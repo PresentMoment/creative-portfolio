@@ -7,7 +7,7 @@ export default class Stress extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "stressScreen" : "stress"}>
+      <div className={this.props.nav ? "stressScreen" : "stress"}>
         <div className="stress-container">
           <div className="stress-image1">
             <img src="images/stfront.jpg" alt="" />

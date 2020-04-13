@@ -14,7 +14,7 @@
 .mixesScreen {
   margin-left: 6em;
   display: flex;
-  opacity: 0.3;
+  opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
@@ -26,8 +26,7 @@
 
 .mixes-text {
   font-family: "Cormorant", serif;
-  text-align: right;
-  padding-left: 2em;
+  padding-left: 3em;
 }
 
 @media (max-width: 790px) {
@@ -62,7 +61,16 @@
   flex-basis: 100%;
 }
 
-.column {
+.text-column {
   flex: 1;
   margin-right: 5em;
+  width: 20em;
+}
+
+.music-column {
+  flex: 1;
+}
+
+.button {
+  cursor: pointer;
 }

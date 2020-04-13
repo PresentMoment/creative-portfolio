@@ -15,7 +15,7 @@
   margin-left: 6em;
   display: flex;
   flex-direction: row;
-  opacity: 0.3;
+  opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }

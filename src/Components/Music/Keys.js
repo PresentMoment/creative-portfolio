@@ -7,7 +7,7 @@ export default class Keys extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "keysScreen" : "keys"}>
+      <div className={this.props.nav ? "keysScreen" : "keys"}>
         <div className="keys-container">
           <div className="keys-image1">
             <img src="images/keysfront.jpg" alt="" />

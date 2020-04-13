@@ -8,7 +8,7 @@ class MusicNav extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="navULContainer">
         <ul onClick={this.props.clickFunction} className="navUL">
           <Link to={"/promenade"}>
             <li>Promenade</li>

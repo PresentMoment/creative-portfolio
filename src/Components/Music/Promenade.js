@@ -7,18 +7,18 @@ export default class Promenade extends Component {
     super(props);
 
     this.state = {
-      loading: true
+      loading: true,
     };
   }
 
   hideSpinner = () => {
     this.setState({
-      loading: false
+      loading: false,
     });
   };
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "promenadeScreen" : "promenade"}>
+      <div className={this.props.nav ? "promenadeScreen" : "promenade"}>
         <div className="promenade-container">
           <div className="promenade-image1">
             <img src="images/promenade.jpg" alt="" />
@@ -63,7 +63,7 @@ export default class Promenade extends Component {
           style={{
             border: 0,
             width: "100%",
-            height: "120px"
+            height: "120px",
           }}
           onLoad={this.hideSpinner}
           src="https://bandcamp.com/EmbeddedPlayer/album=612625473/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"

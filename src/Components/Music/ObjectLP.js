@@ -7,9 +7,7 @@ export default class ObjectLP extends Component {
   }
   render() {
     return (
-      <div
-        className={this.props.sidebarOpen ? "objectScreen" : "objectNoScreen"}
-      >
+      <div className={this.props.nav ? "objectScreen" : "objectNoScreen"}>
         <div className="object-container">
           <div className="object-image1">
             <img src="images/objectfront.jpg" alt="" />
@@ -35,12 +33,6 @@ export default class ObjectLP extends Component {
           </div>
           <div className="object-image1">
             <img id="stfull" src="images/objectback.jpg" alt="" />
-          </div>
-          <div className="object-image1">
-            <img src="images/objectfold1.jpg" alt="" />
-          </div>
-          <div className="object-image1">
-            <img src="images/objectfold2.jpg" alt="" />
           </div>
         </div>
       </div>

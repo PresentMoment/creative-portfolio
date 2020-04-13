@@ -7,7 +7,7 @@ export default class Guide extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "guideScreen" : "guide"}>
+      <div className={this.props.nav ? "guideScreen" : "guide"}>
         <div className="guide-text">
           <p>
             Full length book investigating the social and mental consequences of

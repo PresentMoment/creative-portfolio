@@ -8,17 +8,17 @@ export default class BUTW extends Component {
     super(props);
 
     this.state = {
-      loading: true
+      loading: true,
     };
   }
   hideSpinner = () => {
     this.setState({
-      loading: false
+      loading: false,
     });
   };
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "butwScreen" : "butw"}>
+      <div className={this.props.nav ? "butwScreen" : "butw"}>
         <div className="butw-text">
           <h3>
             "Equal Release" by Zero Grow (Robert Girardin and Elon Katz)

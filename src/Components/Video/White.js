@@ -7,7 +7,7 @@ export default class White extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "videoScreen" : "video"}>
+      <div className={this.props.nav ? "videoScreen" : "video"}>
         <div className="white-text">
           <p>Music video for 'Covered In White' by Jaws (Hundebiss, Milan)</p>
         </div>

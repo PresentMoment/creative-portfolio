@@ -8,7 +8,7 @@ export default class Monuments extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "monumentsScreen" : "monuments"}>
+      <div className={this.props.nav ? "monumentsScreen" : "monuments"}>
         <div className="monument-vid">
           <VimeoPlayer
             className="videoPlayer"

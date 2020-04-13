@@ -7,7 +7,7 @@ export default class Diced extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "dicedScreen" : "diced"}>
+      <div className={this.props.nav ? "dicedScreen" : "diced"}>
         <div className="diced-container">
           <div className="diced-image1">
             <img src="images/dicedfront.jpg" alt="" />
@@ -32,12 +32,6 @@ export default class Diced extends Component {
           </div>
           <div className="diced-image1">
             <img id="stfull" src="images/dicedback.jpg" alt="" />
-          </div>
-          <div className="diced-image1">
-            <img src="images/dicedfold1.jpg" alt="" />
-          </div>
-          <div className="diced-image1">
-            <img src="images/dicedfold2.jpg" alt="" />
           </div>
         </div>
       </div>

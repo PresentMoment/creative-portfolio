@@ -4,7 +4,7 @@ import "../Styles/BlancheStyle.css";
 export default class Blanche extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.nav ? "blancheScreen" : "blanche"}>
         <div className="blanche-txt">
           <p>
             Original Soundtrack for{" "}

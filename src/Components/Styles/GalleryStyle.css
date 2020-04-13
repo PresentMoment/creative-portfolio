@@ -1,3 +1,19 @@
+.photos {
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.photosScreen {
+  opacity: 0.06;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+@media (max-width: 790px) {
+  .photosContainer {
+    margin-left: 5em;
+  }
+}
 .image-gallery-icon {
   color: rgb(85, 85, 85);
   transition: all 0.2s ease-out;

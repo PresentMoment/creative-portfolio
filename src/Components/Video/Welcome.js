@@ -8,7 +8,7 @@ export default class Welcome extends Component {
     this.state = {
       hunt: false,
       camera: false,
-      title: false
+      title: false,
     };
     this.toggleHunt = this.toggleHunt.bind(this);
     this.toggleCamera = this.toggleCamera.bind(this);
@@ -26,7 +26,7 @@ export default class Welcome extends Component {
   }
   render() {
     return (
-      <div className={this.props.sidebarOpen ? "welcomeScreen" : "welcome"}>
+      <div className={this.props.nav ? "welcomeScreen" : "welcome"}>
         <div className="player-wrapper">
           <YouTubePlayer
             className="videoPlayer"
@@ -44,7 +44,7 @@ export default class Welcome extends Component {
             viewer is left to participate in a desolate, serialized cinemascape
             of stairwells, parking lots, construction sites and public schools.
           </p>
-          <div onClick={e => this.toggleHunt(e)}>
+          <div onClick={(e) => this.toggleHunt(e)}>
             <h3 id="welcomePop">The Hunt</h3>
           </div>
           {this.state.hunt ? (
@@ -63,7 +63,7 @@ export default class Welcome extends Component {
               </p>
             </div>
           ) : null}
-          <div onClick={e => this.toggleCamera(e)}>
+          <div onClick={(e) => this.toggleCamera(e)}>
             <h3 id="welcomePop">The Camera</h3>
           </div>
           {this.state.camera ? (
@@ -91,7 +91,7 @@ export default class Welcome extends Component {
               </p>{" "}
             </div>
           ) : null}
-          <div onClick={e => this.toggleTitle(e)}>
+          <div onClick={(e) => this.toggleTitle(e)}>
             <h3 id="welcomePop">The Title</h3>
           </div>
           {this.state.title ? (
