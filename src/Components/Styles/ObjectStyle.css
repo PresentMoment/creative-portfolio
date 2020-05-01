@@ -47,7 +47,7 @@
   margin-right: 1em;
   margin-top: 10%;
 }
-@media (max-width: 700px) {
+@media (max-width: 790px) {
   .object-text {
     width: 270px;
     margin-top: 0;

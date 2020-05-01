@@ -41,11 +41,12 @@
   margin-left: 1em;
   margin-right: 1em;
 }
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .stress-text {
     width: 350px;
     margin-top: 0;
     padding-left: 0;
+    margin-left: 0;
   }
 }
 @media (max-width: 525px) {

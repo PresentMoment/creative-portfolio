@@ -8,11 +8,16 @@ export default class Mixes extends Component {
 
     this.state = {
       jazz: false,
+      screen: false,
     };
     this.toggleJazz = this.toggleJazz.bind(this);
+    this.toggleScreen = this.toggleScreen.bind(this);
   }
   toggleJazz() {
     this.setState({ jazz: !this.state.jazz });
+  }
+  toggleScreen() {
+    this.setState({ screen: !this.state.screen });
   }
   render() {
     return (
@@ -55,6 +60,71 @@ export default class Mixes extends Component {
             <div className="music-column">
               <div className="soundCloud">
                 <ReactPlayer url="https://soundcloud.com/robertgirardin/another-hour-of-jazz" />
+              </div>
+            </div>
+          </div>
+          <div className="mixesContent">
+            <div className="text-column">
+              <h1>Screen Time</h1>
+              {this.state.screen ? (
+                <div className="button" onClick={(e) => this.toggleScreen(e)}>
+                  <p>Edgar Froese - Blue Panther (from 'Kamikaze 1989')</p>
+                  <p>Michael Shrieve - Mon Amie</p>
+                  <p>Mica Levi - Lonely Void (from 'Under The Skin')</p>
+                  <p>Michiru Oshima - Heal (from 'Ico')</p>
+                  <p>
+                    Yoichiro Yoshikawa - Nebraska (from 'The Miracle Planet')
+                  </p>
+                  <p>Vladimir Cosma - P.S. & P.S. (from 'Diva')</p>
+                  <p>Haruomi Hosono - Fujitsubo (from 'Tale of Genji')</p>
+                  <p>Thomas Newman - Arose (from 'American Beauty')</p>
+                  <p>
+                    Howard Shore - After Hours : Midnight (from 'After Hours')
+                  </p>
+                  <p>Can - Theme from Alice In The Cities</p>
+                  <p>
+                    Bruce Langhorn - No Further Need (from 'The Hired Hand')
+                  </p>
+                  <p>Andrew Dickson - Meantime Main Titles (from 'Meantime')</p>
+                  <p>Mica Levi - Monos (from 'Monos')</p>
+                  <p>Wally Badarou - Theme from Countryman</p>
+                  <p>Daniel Lopatin - Pure Elation (from 'Uncut Gems')</p>
+                  <p>Marvin Gaye - 'T' Plays It Cool (from 'Troubleman')</p>
+                  <p>
+                    Fab 5 Freddy & Chris Stein - Down By Law (from 'Wild Style')
+                  </p>
+                  <p>F.P.U. - Cockett's Theme (from 'Miami Vice')</p>
+                  <p>Thomas Newman - Dead Already (from 'American Beauty')</p>
+                  <p>Tangerine Dream - Out Of The Heat (from 'Firestarter')</p>
+                  <p>Marius West - Celebration (from 'Super Markt')</p>
+                  <p>
+                    Jürgen Knieper - Goodbye To Lisbon (from 'The State of
+                    Things')
+                  </p>
+                  <p>
+                    Hiroyuki Onogawa - August In The Water (from 'August In The
+                    Water')
+                  </p>
+                  <p>Johnny Jewel - Windswept (from 'Twin Peaks')</p>
+                  <p>
+                    Popol Vuh - Die große Ekstase des Bildschnitzers Steiner
+                    (from 'The Great Ecstasy of Woodcarver Steiner')
+                  </p>
+                  <p>Canto (from 'Purple Noon')</p>
+                  <p>Mica Levi - Love (from 'Under The Skin')</p>
+                  <p>Michael Stearns - Closing Credits (from 'Chronos')</p>
+                  <p>Tangerine Dream - Charly The Kid (from 'Firestarter')</p>
+                </div>
+              ) : (
+                <div className="button" onClick={(e) => this.toggleScreen(e)}>
+                  <p>Music from Movies</p>
+                  <p>tracklist</p>
+                </div>
+              )}
+            </div>
+            <div className="music-column">
+              <div className="soundCloud">
+                <ReactPlayer url="https://soundcloud.com/robertgirardin/screen-time" />
               </div>
             </div>
           </div>
