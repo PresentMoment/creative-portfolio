@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 import "../Styles/MixesStyle.css";
 
 export default class Mixes extends Component {
@@ -9,9 +11,11 @@ export default class Mixes extends Component {
     this.state = {
       jazz: false,
       screen: false,
+      math: false,
     };
     this.toggleJazz = this.toggleJazz.bind(this);
     this.toggleScreen = this.toggleScreen.bind(this);
+    this.toggleMath = this.toggleMath.bind(this);
   }
   toggleJazz() {
     this.setState({ jazz: !this.state.jazz });
@@ -19,11 +23,77 @@ export default class Mixes extends Component {
   toggleScreen() {
     this.setState({ screen: !this.state.screen });
   }
+  toggleMath() {
+    this.setState({ math: !this.state.math });
+  }
   render() {
     return (
       <div className={this.props.nav ? "mixesScreen" : "mixes"}>
         <div className="mixes-text">
           <h3>A series of genre specific mixes</h3>
+          <div className="mixesContent">
+            <div className="text-column">
+              <h1>Music as Math</h1>
+              {this.state.math ? (
+                <div className="button" onClick={(e) => this.toggleMath(e)}>
+                  <p>
+                    Craig Krupka - Electric Piano, Vibraphone and Percussion
+                  </p>
+                  <p>Konrad Sprenger - Opening</p>
+                  <p>Akis - New Age Rising (Pt. VIII)</p>
+                  <p>Lucky Dragons - Future Jail</p>
+                  <p>Sanford Ponder - Araguaia</p>
+                  <p>Aril Brikha - Dance Of A Trillion Stars</p>
+                  <p>Wim Mertens - Gentleman Of Leisure</p>
+                  <p>Terry Riley - G Song</p>
+                  <p>Vito Ricci - Hollywood</p>
+                  <p>Michael Gordon - Timber Part I</p>
+                  <p>Philip Glass - Music In 12 Parts (Part I)</p>
+                  <p>Maggi Payne - Flights Of Fancy</p>
+                  <p>Mimi Majick - Mimi Majick’s Utilities One</p>
+                  <p>Chris Hughes - Shift Part III (From Violin Phase)</p>
+                  <p>Mike Ratledge - Riddles Of The Sphinx Sequence II</p>
+                  <p>Rod Hamilton & Tiffany Seal - Pull Drift Two</p>
+                  <p>Robert Rich - Interlocking Circles</p>
+                  <p>Sterac - Astronotes</p>
+                  <p>Rupert Clervaux & Beatrice Dillon - II</p>
+                  <p>Lino Capra Vaccina - Antico Adagio</p>
+                  <p>Vangelis Katsoulis - The Slipping Beauty</p>
+                  <p>Oneothrix Point Never - Boring Angel</p>
+                  <p>Michael Stearns - Escalator</p>
+                  <p>Daniel Lentz - O-Ke-Wa</p>
+                  <p>Kelly Moran - Helix</p>
+                  <p>Pep Llopis - Jardins Aquatics</p>
+                  <p>Jean-Michel Blais & CFCF - Two Mirrors</p>
+                  <p>Philip Glass - Rubric</p>
+                  <p>Donato Dozzy - 12H.4</p>
+                  <p>Leif - Tuesday Nothing</p>
+                  <p>Mammane Sani - Salamatu</p>
+                  <p>Masahide Sakuma - Vitamin For Victory</p>
+                  <p>Robert Hood - Peace (Closing Theme)</p>
+                  <p>Takashi Kokubo - Playing Among The Gods</p>
+                  <p>Meyers - Ambient Role Play</p>
+                  <p>Motion Graphics - Brass Mechanics</p>
+                  <p>Anthony Moore - Mu Na H-Uile Ni A Shaoileas</p>
+                  <p>Urban Sax - Part III</p>
+                  <p>Michael O’Shea - Anfa Dasachtach</p>
+                  <p>Remko Scha - Sweep</p>
+                  <p>Su Tissue - Salon De Musique</p>
+                </div>
+              ) : (
+                <div className="button" onClick={(e) => this.toggleMath(e)}>
+                  <p>Minimalst Music</p>
+                  <p>tracklist</p>
+                </div>
+              )}
+            </div>
+            <div className="music-column">
+              <div className="soundCloud">
+                <img src="images/musicasmath.jpg" alt="" />
+                <AudioPlayer src="http://robertgirardin.net/musics/musicasmath.mp3" />
+              </div>
+            </div>
+          </div>
           <div className="mixesContent">
             <div className="text-column">
               <h1>Another Hour of Jazz</h1>

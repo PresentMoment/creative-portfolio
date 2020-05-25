@@ -54,11 +54,25 @@
   padding-top: 2em;
 }
 
+.soundCloud img {
+  max-width: 600px;
+}
+@media (max-width: 790px) {
+  .soundCloud img {
+    width: 400px;
+  }
+}
+
 .mixesContent {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   flex-basis: 100%;
+}
+@media (max-width: 790px) {
+  .mixesContent {
+    flex-direction: column-reverse;
+  }
 }
 
 .text-column {
