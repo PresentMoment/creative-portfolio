@@ -11,6 +11,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import Landing from "./Landing";
 import EMMusic from "./Music/EMMusic";
 import BUTW from "./Music/BUTW";
@@ -39,6 +40,8 @@ export default withRouter(function NavBar(props) {
     menuValue([...menuClicked, e.target.id]);
   };
 
+  let history = createBrowserHistory();
+
   useEffect(() => {
     props.history.listen(() => {
       setNav(false);
@@ -46,6 +49,8 @@ export default withRouter(function NavBar(props) {
   });
 
   const toggleNav = (e) => {
+    console.log(e.target.id);
+    console.log(menuClicked);
     if (e.target.id !== menuClicked[menuClicked.length - 1] && nav) {
     } else {
       setNav(!nav);

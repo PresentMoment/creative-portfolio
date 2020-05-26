@@ -2,6 +2,7 @@
 
 * {
   text-decoration: none;
+  color: inherit;
 }
 
 * p {
@@ -84,15 +85,19 @@
   margin: 0;
 }
 
+.navUl a {
+  color: inherit;
+}
+
 @media (max-width: 790px) {
   .navUL {
     display: flex;
     flex-direction: row;
-    margin-left: 25%;
+    margin-left: 45%;
     margin-top: 0;
     flex-wrap: wrap;
     width: 50vw;
-    height: 10vh;
+    height: 20vh;
     line-height: 2em;
     justify-content: space-between;
   }

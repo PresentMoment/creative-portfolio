@@ -53,15 +53,30 @@
   overflow: hidden;
   padding-top: 2em;
 }
-
-.soundCloud img {
-  max-width: 600px;
-}
-@media (max-width: 790px) {
-  .soundCloud img {
-    width: 400px;
+@media (max-width: 490px) {
+  .soundCloud {
+    width: 320px;
   }
 }
+@media (max-width: 390px) {
+  .soundCloud {
+    width: 280px;
+  }
+}
+
+.soundCloud img {
+  max-width: 100%;
+}
+/* @media (max-width: 490px) {
+  .soundCloud img {
+    width: 300px;
+  }
+}
+@media (max-width: 390px) {
+  .soundCloud img {
+    width: 200px;
+  }
+} */
 
 .mixesContent {
   display: flex;
@@ -79,6 +94,12 @@
   flex: 1;
   margin-right: 5em;
   width: 20em;
+}
+@media (max-width: 790px) {
+  .text-column {
+    margin-right: 0em;
+    width: 100%;
+  }
 }
 
 .music-column {
