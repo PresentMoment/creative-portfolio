@@ -141,6 +141,12 @@
   margin-top: 5%;
   font-size: 2rem;
 }
+@media (max-width: 730px) {
+  .contact {
+    font-size: 1rem;
+    margin-left: 25%;
+  }
+}
 
 .contactScreen {
   margin-left: 15%;

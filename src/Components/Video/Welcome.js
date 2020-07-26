@@ -4,7 +4,7 @@ import "../Styles/WelcomeStyle.css";
 
 export default class Welcome extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       hunt: false,
       camera: false,

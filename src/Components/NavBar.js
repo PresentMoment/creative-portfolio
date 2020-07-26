@@ -11,7 +11,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { createBrowserHistory } from "history";
+//import { createBrowserHistory } from "history";
 import Landing from "./Landing";
 import EMMusic from "./Music/EMMusic";
 import BUTW from "./Music/BUTW";
@@ -34,28 +34,38 @@ import Mixes from "./Music/Mixes";
 export default withRouter(function NavBar(props) {
   const [nav, setNav] = useState(false);
 
-  let [menuClicked, menuValue] = useState([]);
+  // let [menuClicked, menuValue] = useState([]);
 
-  const setMenu = (e) => {
-    menuValue([...menuClicked, e.target.id]);
-  };
+  // const setMenu = (e) => {
+  //   menuValue([...menuClicked, e.target.id]);
+  // };
 
-  let history = createBrowserHistory();
+  //let history = createBrowserHistory();
 
   useEffect(() => {
+    if (
+      props.musicOpen ||
+      props.videosOpen ||
+      props.photosOpen ||
+      props.writingOpen
+    ) {
+      setNav(true);
+    } else {
+      setNav(false);
+    }
     props.history.listen(() => {
       setNav(false);
     });
-  });
+  }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history]);
 
-  const toggleNav = (e) => {
-    console.log(e.target.id);
-    console.log(menuClicked);
-    if (e.target.id !== menuClicked[menuClicked.length - 1] && nav) {
-    } else {
-      setNav(!nav);
-    }
-  };
+  // const toggleNav = (e) => {
+  //   //console.log(e.target.id);
+  //   //console.log(menuClicked);
+  //   if (e.target.id !== menuClicked[menuClicked.length - 1] && nav) {
+  //   } else {
+  //     setNav(!nav);
+  //   }
+  // };
 
   return (
     <Router>
@@ -64,8 +74,8 @@ export default withRouter(function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleMusic();
-              setMenu(e);
-              toggleNav(e);
+              //setMenu(e);
+              //toggleNav(e);
             }}
           >
             <p id="music">Music</p>
@@ -74,8 +84,8 @@ export default withRouter(function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleVideos();
-              setMenu(e);
-              toggleNav(e);
+              //setMenu(e);
+              //toggleNav(e);
             }}
           >
             <p id="videos">Videos</p>
@@ -84,8 +94,8 @@ export default withRouter(function NavBar(props) {
           <div
             onClick={(e) => {
               props.togglePhotos();
-              setMenu(e);
-              toggleNav(e);
+              //setMenu(e);
+              //toggleNav(e);
             }}
           >
             <p id="photos">Photos</p>
@@ -94,8 +104,8 @@ export default withRouter(function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleWriting();
-              setMenu(e);
-              toggleNav(e);
+              //setMenu(e);
+              //toggleNav(e);
             }}
           >
             <p id="writing">Writing</p>
