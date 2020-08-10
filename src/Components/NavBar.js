@@ -6,7 +6,7 @@ import WritingNav from "./Navs/WritingNav";
 import { Link } from "react-router-dom";
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   withRouter,
   Switch,
   Route,
@@ -31,7 +31,7 @@ import LaQuinta from "./Photos/LaQuinta";
 import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 
-export default withRouter(function NavBar(props) {
+export default (function NavBar(props) {
   const [nav, setNav] = useState(false);
 
   // let [menuClicked, menuValue] = useState([]);
@@ -53,10 +53,16 @@ export default withRouter(function NavBar(props) {
     } else {
       setNav(false);
     }
-    props.history.listen(() => {
-      setNav(false);
-    });
-  }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history]);
+    // props.history.listen(() => {
+    //   setNav(false);
+    // });
+  }, [
+    props.musicOpen,
+    props.videosOpen,
+    props.photosOpen,
+    props.writingOpen,
+    props.history,
+  ]);
 
   // const toggleNav = (e) => {
   //   //console.log(e.target.id);
