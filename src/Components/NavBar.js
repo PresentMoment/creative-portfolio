@@ -5,12 +5,7 @@ import PhotosNav from "./Navs/PhotosNav";
 import WritingNav from "./Navs/WritingNav";
 import { Link } from "react-router-dom";
 
-import {
-  BrowserRouter as Router,
-  withRouter,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import { createBrowserHistory } from "history";
 import Landing from "./Landing";
 import EMMusic from "./Music/EMMusic";
@@ -33,15 +28,6 @@ import Mixes from "./Music/Mixes";
 
 export default (function NavBar(props) {
   const [nav, setNav] = useState(false);
-
-  // let [menuClicked, menuValue] = useState([]);
-
-  // const setMenu = (e) => {
-  //   menuValue([...menuClicked, e.target.id]);
-  // };
-
-  //let history = createBrowserHistory();
-
   useEffect(() => {
     if (
       props.musicOpen ||
@@ -53,9 +39,6 @@ export default (function NavBar(props) {
     } else {
       setNav(false);
     }
-    // props.history.listen(() => {
-    //   setNav(false);
-    // });
   }, [
     props.musicOpen,
     props.videosOpen,
@@ -64,15 +47,6 @@ export default (function NavBar(props) {
     props.history,
   ]);
 
-  // const toggleNav = (e) => {
-  //   //console.log(e.target.id);
-  //   //console.log(menuClicked);
-  //   if (e.target.id !== menuClicked[menuClicked.length - 1] && nav) {
-  //   } else {
-  //     setNav(!nav);
-  //   }
-  // };
-
   return (
     <Router>
       <div>
@@ -80,8 +54,6 @@ export default (function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleMusic();
-              //setMenu(e);
-              //toggleNav(e);
             }}
           >
             <p id="music">Music</p>
@@ -90,8 +62,6 @@ export default (function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleVideos();
-              //setMenu(e);
-              //toggleNav(e);
             }}
           >
             <p id="videos">Videos</p>
@@ -100,8 +70,6 @@ export default (function NavBar(props) {
           <div
             onClick={(e) => {
               props.togglePhotos();
-              //setMenu(e);
-              //toggleNav(e);
             }}
           >
             <p id="photos">Photos</p>
@@ -110,8 +78,6 @@ export default (function NavBar(props) {
           <div
             onClick={(e) => {
               props.toggleWriting();
-              //setMenu(e);
-              //toggleNav(e);
             }}
           >
             <p id="writing">Writing</p>
