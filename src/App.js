@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <Router>
       <NavBar
         musicOpen={music}
         toggleMusic={toggleMusic}
@@ -44,6 +44,6 @@ export default function App() {
         writingOpen={writing}
         toggleWriting={toggleWriting}
       />
-    </div>
+    </Router>
   );
 }

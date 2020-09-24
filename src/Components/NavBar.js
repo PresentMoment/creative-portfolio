@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Link, Switch, Route, withRouter } from "react-router-dom";
+import { useTransition, animated } from "react-spring";
+
 import MusicNav from "./Navs/MusicNav";
 import VideoNav from "./Navs/VideoNav";
 import PhotosNav from "./Navs/PhotosNav";
 import WritingNav from "./Navs/WritingNav";
-import { Link } from "react-router-dom";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import { createBrowserHistory } from "history";
 import Landing from "./Landing";
 import EMMusic from "./Music/EMMusic";
 import BUTW from "./Music/BUTW";
@@ -26,7 +26,9 @@ import LaQuinta from "./Photos/LaQuinta";
 import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 
-export default (function NavBar(props) {
+export default withRouter(function NavBar(props) {
+  const { location, history } = { ...props };
+  console.log(location);
   const [nav, setNav] = useState(false);
   useEffect(() => {
     if (
@@ -39,70 +41,72 @@ export default (function NavBar(props) {
     } else {
       setNav(false);
     }
-  }, [
-    props.musicOpen,
-    props.videosOpen,
-    props.photosOpen,
-    props.writingOpen,
-    props.history,
-  ]);
+  }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history]);
+
+  const transitions = useTransition(location, (location) => location.pathname, {
+    from: { position: "absolute", opacity: 0 },
+    enter: { position: "absolute", opacity: 1 },
+    leave: { position: "absolute", opacity: 0 },
+  });
+
+  console.log(transitions);
 
   return (
-    <Router>
-      <div>
-        <div className="topNav">
-          <div
-            onClick={(e) => {
-              props.toggleMusic();
-            }}
-          >
-            <p id="music">Music</p>
-            {props.musicOpen ? <MusicNav /> : null}
-          </div>
-          <div
-            onClick={(e) => {
-              props.toggleVideos();
-            }}
-          >
-            <p id="videos">Videos</p>
-            {props.videosOpen ? <VideoNav /> : null}
-          </div>
-          <div
-            onClick={(e) => {
-              props.togglePhotos();
-            }}
-          >
-            <p id="photos">Photos</p>
-            {props.photosOpen ? <PhotosNav /> : null}
-          </div>
-          <div
-            onClick={(e) => {
-              props.toggleWriting();
-            }}
-          >
-            <p id="writing">Writing</p>
-            {props.writingOpen ? <WritingNav /> : null}
-          </div>
-          <div
-            onClick={() => {
-              setNav(false);
-            }}
-          >
-            <Link to="/contact">
-              <p>Contact</p>
-            </Link>
-          </div>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/our_girardin/"
-          >
-            <p>Instagram</p>
-          </a>
+    <div>
+      <div className="topNav">
+        <div
+          onClick={() => {
+            props.toggleMusic();
+          }}
+        >
+          <p id="music">Music</p>
+          {props.musicOpen ? <MusicNav /> : null}
         </div>
-        <div style={{ width: "100%", height: "50px" }} />
-        <div>
-          <Switch>
+        <div
+          onClick={() => {
+            props.toggleVideos();
+          }}
+        >
+          <p id="videos">Videos</p>
+          {props.videosOpen ? <VideoNav /> : null}
+        </div>
+        <div
+          onClick={() => {
+            props.togglePhotos();
+          }}
+        >
+          <p id="photos">Photos</p>
+          {props.photosOpen ? <PhotosNav /> : null}
+        </div>
+        <div
+          onClick={() => {
+            props.toggleWriting();
+          }}
+        >
+          <p id="writing">Writing</p>
+          {props.writingOpen ? <WritingNav /> : null}
+        </div>
+        <div
+          onClick={() => {
+            setNav(false);
+          }}
+        >
+          <Link to="/contact">
+            <p>Contact</p>
+          </Link>
+        </div>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.instagram.com/our_girardin/"
+        >
+          <p>Instagram</p>
+        </a>
+      </div>
+      <div style={{ width: "100%", height: "50px" }} />
+      {transitions.map(({ item, props }) => (
+        <animated.div key={item.key} style={props}>
+          <Switch location={item}>
             <Route
               exact
               path="/"
@@ -194,8 +198,8 @@ export default (function NavBar(props) {
               render={(props) => <Mixes {...props} nav={nav} />}
             />
           </Switch>
-        </div>
-      </div>
-    </Router>
+        </animated.div>
+      ))}
+    </div>
   );
 });
