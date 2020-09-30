@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Switch, Route, withRouter } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 
@@ -27,8 +27,7 @@ import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 
 export default withRouter(function NavBar(props) {
-  const { location, history } = { ...props };
-  console.log(location);
+  const { location } = { ...props };
   const [nav, setNav] = useState(false);
   useEffect(() => {
     if (
@@ -56,8 +55,6 @@ export default withRouter(function NavBar(props) {
       transform: "translateX(100%)",
     },
   });
-
-  console.log(transitions);
 
   return (
     <div>
