@@ -44,9 +44,17 @@ export default withRouter(function NavBar(props) {
   }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history]);
 
   const transitions = useTransition(location, (location) => location.pathname, {
-    from: { position: "absolute", opacity: 0 },
-    enter: { position: "absolute", opacity: 1 },
-    leave: { position: "absolute", opacity: 0 },
+    from: {
+      position: "absolute",
+      width: "100%",
+      transform: "translateX(-100%)",
+    },
+    enter: { position: "absolute", width: "100%", transform: "translateX(0)" },
+    leave: {
+      position: "absolute",
+      width: "100%",
+      transform: "translateX(100%)",
+    },
   });
 
   console.log(transitions);
