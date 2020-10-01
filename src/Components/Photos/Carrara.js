@@ -44,6 +44,7 @@ export default class Carrara extends Component {
               showFullscreenButton={false}
               showThumbnails={!this.state.modalFullscreen ? true : false}
               onScreenChange={this.handleFullScreen}
+              lazyLoad={true}
             />
             <div style={{ flexGrow: 1 }} />
             <div style={{ marginTop: "auto" }}>
