@@ -4,13 +4,10 @@ import "../Styles/BUTWStyle.css";
 import ClipLoader from "react-spinners/ClipLoader";
 
 export default class BUTW extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    loading: true,
+  };
 
-    this.state = {
-      loading: true,
-    };
-  }
   hideSpinner = () => {
     this.setState({
       loading: false,

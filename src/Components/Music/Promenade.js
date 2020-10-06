@@ -3,13 +3,9 @@ import "../Styles/PromenadeStyle.css";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 export default class Promenade extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-    };
-  }
+  state = {
+    loading: true,
+  };
 
   hideSpinner = () => {
     this.setState({

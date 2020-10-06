@@ -5,27 +5,21 @@ import "react-h5-audio-player/lib/styles.css";
 import "../Styles/MixesStyle.css";
 
 export default class Mixes extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    jazz: false,
+    screen: false,
+    math: false,
+  };
 
-    this.state = {
-      jazz: false,
-      screen: false,
-      math: false,
-    };
-    this.toggleJazz = this.toggleJazz.bind(this);
-    this.toggleScreen = this.toggleScreen.bind(this);
-    this.toggleMath = this.toggleMath.bind(this);
-  }
-  toggleJazz() {
+  toggleJazz = () => {
     this.setState({ jazz: !this.state.jazz });
-  }
-  toggleScreen() {
+  };
+  toggleScreen = () => {
     this.setState({ screen: !this.state.screen });
-  }
-  toggleMath() {
+  };
+  toggleMath = () => {
     this.setState({ math: !this.state.math });
-  }
+  };
   render() {
     return (
       <div className={this.props.nav ? "mixesScreen" : "mixes"}>

@@ -3,13 +3,9 @@ import "../Styles/EMStyle.css";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 export default class EMMusic extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: true,
-    };
-  }
+  state = {
+    loading: true,
+  };
 
   hideSpinner = () => {
     this.setState({

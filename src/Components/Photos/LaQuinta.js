@@ -11,12 +11,9 @@ for (let i = 0; i < 17; i++) {
   };
 }
 export default class LaQuinta extends Component {
-  constructor() {
-    super();
-    this.state = {
-      modalFullscreen: false,
-    };
-  }
+  state = {
+    modalFullscreen: false,
+  };
 
   handleFullScreen = () => {
     this.setState({ modalFullscreen: !this.state.modalFullscreen });

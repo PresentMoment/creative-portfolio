@@ -3,27 +3,21 @@ import YouTubePlayer from "react-player";
 import "../Styles/WelcomeStyle.css";
 
 export default class Welcome extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      hunt: false,
-      camera: false,
-      title: false,
-    };
-    this.toggleHunt = this.toggleHunt.bind(this);
-    this.toggleCamera = this.toggleCamera.bind(this);
-    this.toggleTitle = this.toggleTitle.bind(this);
-  }
+  state = {
+    hunt: false,
+    camera: false,
+    title: false,
+  };
 
-  toggleHunt() {
+  toggleHunt = () => {
     this.setState({ hunt: !this.state.hunt });
-  }
-  toggleCamera() {
+  };
+  toggleCamera = () => {
     this.setState({ camera: !this.state.camera });
-  }
-  toggleTitle() {
+  };
+  toggleTitle = () => {
     this.setState({ title: !this.state.title });
-  }
+  };
   render() {
     return (
       <div className={this.props.nav ? "welcomeScreen" : "welcome"}>
