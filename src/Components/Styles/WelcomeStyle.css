@@ -51,6 +51,12 @@
   text-align: center;
 }
 
+.welcomePop:hover {
+  color: #ffffff;
+  background: #198822;
+  border: 0.02px solid #198822;
+}
+
 .popClicked {
   font-family: "Cormorant", serif;
   color: #198822;
