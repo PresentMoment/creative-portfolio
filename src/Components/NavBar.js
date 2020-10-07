@@ -30,6 +30,7 @@ export default withRouter(function NavBar(props) {
   const { location } = { ...props };
   const [nav, setNav] = useState(false);
   useEffect(() => {
+    console.log(location);
     if (
       props.musicOpen ||
       props.videosOpen ||
@@ -40,7 +41,7 @@ export default withRouter(function NavBar(props) {
     } else {
       setNav(false);
     }
-  }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history]);
+  }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history, location]);
 
   const transitions = useTransition(location, (location) => location.pathname, {
     from: {
@@ -48,7 +49,13 @@ export default withRouter(function NavBar(props) {
       width: "100%",
       transform: "translateX(-100%)",
     },
-    enter: { position: "absolute", width: "100%", transform: "translateX(0)" },
+    enter: {
+      position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
+      width: "100%",
+      transform: `${
+        location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
+      }`,
+    },
     leave: {
       position: "absolute",
       width: "100%",
