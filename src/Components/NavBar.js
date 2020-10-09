@@ -117,7 +117,7 @@ export default withRouter(function NavBar(props) {
       </div>
       <div style={{ width: "100%", height: "50px" }} />
       {transitions.map(({ item, props }) => (
-        <animated.div key={item.key} style={props}>
+        <animated.div key={item.key} style={props} className="aniDiv">
           <Switch location={item}>
             <Route
               exact

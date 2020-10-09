@@ -47,11 +47,19 @@
 @media only screen and (max-width: 870px) {
   .nameAfter {
     font-size: 6em;
+    width: 80vw;
+    position: absolute;
+    top: -18vh;
+    left: 20vw;
   }
 }
 @media only screen and (max-width: 870px) {
   .name {
     font-size: 4em;
+    width: 80vw;
+    position: absolute;
+    top: -18vh;
+    left: 20vw;
   }
 }
 
@@ -60,9 +68,10 @@
   position: absolute;
   z-index: -1;
 }
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 730px) {
   .nameTag {
-    margin-top: 35%;
+    margin-top: 28vh;
+    margin-left: 25vw;
   }
 }
 
