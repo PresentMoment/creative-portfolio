@@ -158,8 +158,15 @@
 .image-gallery-content.fullscreen {
   background: #000;
 }
-.image-gallery-content .image-gallery-slide .image-gallery-image {
-  max-height: calc(100vh - 280px);
+@media (orientation: portrait) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 280px);
+  }
+}
+@media (orientation: landscape) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-width: calc(100vw - 380px);
+  }
 }
 .image-gallery-content.left .image-gallery-slide .image-gallery-image,
 .image-gallery-content.right .image-gallery-slide .image-gallery-image {
