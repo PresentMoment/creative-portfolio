@@ -1,21 +1,20 @@
 .welcome {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
+  margin-left: 5em;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
 @media (max-width: 1200px) {
   .welcome {
     flex-direction: column;
-    margin-left: 12%;
   }
 }
 
 .welcomeScreen {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
+  margin-left: 5em;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
@@ -23,7 +22,6 @@
 @media (max-width: 1200px) {
   .welcomeScreen {
     flex-direction: column;
-    margin-left: 12%;
   }
 }
 

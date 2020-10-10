@@ -136,14 +136,14 @@
 
 .video {
   margin: 0 auto;
-  margin-left: 10%;
+  margin-left: 5em;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
 
 .videoScreen {
   margin: 0 auto;
-  margin-left: 10%;
+  margin-left: 5em;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
@@ -162,26 +162,13 @@
 }
 
 .contactScreen {
-  margin-left: 15%;
   margin-top: 5%;
+  margin-left: 25%;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
-  font-size: 2rem;
 }
 
 .contact a {
   cursor: pointer;
-}
-
-@media (max-width: 730px) {
-  .videoPlayer {
-    width: 100%;
-  }
-}
-
-@media (max-width: 525px) {
-  .videoPlayer {
-    width: 200px;
-  }
 }

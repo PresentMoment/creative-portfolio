@@ -3,9 +3,6 @@ import VimeoPlayer from "react-player";
 import "../Styles/MonumentsStyle.css";
 
 export default class Monuments extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className={this.props.nav ? "monumentsScreen" : "monuments"}>
@@ -13,6 +10,7 @@ export default class Monuments extends Component {
           <VimeoPlayer
             className="videoPlayer"
             url="https://vimeo.com/198787549"
+            width={"100%"}
           />
         </div>
 

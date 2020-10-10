@@ -1,7 +1,7 @@
 .monuments {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
+  margin-left: 5em;
   width: auto;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
@@ -15,7 +15,7 @@
 .monumentsScreen {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
+  margin-left: 5em;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
