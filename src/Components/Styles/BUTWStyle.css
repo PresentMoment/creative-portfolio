@@ -1,5 +1,5 @@
 .butw {
-  margin-left: 6em;
+  margin-left: 5em;
   display: flex;
   flex-direction: row;
   transition: all 0.1s ease;
@@ -12,7 +12,7 @@
 }
 
 .butwScreen {
-  margin-left: 6em;
+  margin-left: 5em;
   display: flex;
   flex-direction: row;
   opacity: 0.06;

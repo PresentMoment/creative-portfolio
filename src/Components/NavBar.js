@@ -115,7 +115,7 @@ export default withRouter(function NavBar(props) {
           <p>Instagram</p>
         </a>
       </div>
-      <div style={{ width: "100%", height: "50px" }} />
+      <div className="navSpacer" />
       {transitions.map(({ item, props }) => (
         <animated.div key={item.key} style={props} className="aniDiv">
           <Switch location={item}>
