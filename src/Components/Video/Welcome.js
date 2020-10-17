@@ -25,7 +25,6 @@ export default class Welcome extends Component {
           <YouTubePlayer
             className="videoPlayer"
             url="https://youtu.be/KpEU0OGpDr0"
-            width={"100%"}
           />
         </div>
         <div className="welcome-text">

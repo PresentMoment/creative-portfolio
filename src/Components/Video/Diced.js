@@ -8,11 +8,12 @@ export default class Diced extends Component {
         <div className="diced-vid-text">
           <p>Music video for 'Diced By Light' by Jaws (Hundebiss, Milan)</p>
         </div>
-        <ReactPlayer
-          className="videoPlayer"
-          url="https://vimeo.com/94675373"
-          width={"100%"}
-        />
+        <div className="player-wrapper">
+          <ReactPlayer
+            className="videoPlayer"
+            url="https://vimeo.com/94675373"
+          />
+        </div>
       </div>
     );
   }

@@ -30,7 +30,6 @@ export default withRouter(function NavBar(props) {
   const { location } = { ...props };
   const [nav, setNav] = useState(false);
   useEffect(() => {
-    console.log(location);
     if (
       props.musicOpen ||
       props.videosOpen ||

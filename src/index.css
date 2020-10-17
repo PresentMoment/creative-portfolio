@@ -172,3 +172,12 @@
 .contact a {
   cursor: pointer;
 }
+
+.player-wrapper {
+  width: 56%;
+  height: 100%;
+}
+
+.videoPlayer > div {
+  position: relative;
+}

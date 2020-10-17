@@ -6,11 +6,10 @@ export default class Monuments extends Component {
   render() {
     return (
       <div className={this.props.nav ? "monumentsScreen" : "monuments"}>
-        <div className="monument-vid">
+        <div className="player-wrapper">
           <VimeoPlayer
             className="videoPlayer"
             url="https://vimeo.com/198787549"
-            width={"100%"}
           />
         </div>
 
