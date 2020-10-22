@@ -7,7 +7,7 @@ export default class Landing extends Component {
       <div>
         <div className="nameTag">
           <h3 id={this.props.nav ? "tagAfter" : "tagBefore"}>
-            is a musician, film maker and writer
+            testing cpanel.yml
           </h3>
         </div>
         <div className={this.props.nav ? "nameAfter" : "name"}>
