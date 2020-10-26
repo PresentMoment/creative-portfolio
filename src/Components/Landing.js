@@ -6,7 +6,9 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="nameTag">
-          <h3 id={this.props.nav ? "tagAfter" : "tagBefore"}>c pnl yml</h3>
+          <h3 id={this.props.nav ? "tagAfter" : "tagBefore"}>
+            is a musician, film maker and writer
+          </h3>
         </div>
         <div className={this.props.nav ? "nameAfter" : "name"}>
           <h1>RobertGirardin</h1>
