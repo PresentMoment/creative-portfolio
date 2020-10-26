@@ -19,18 +19,21 @@ export default function Welcome(props) {
   };
 
   const huntTransition = useTransition(hunt, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
+    config: { mass: 1, tension: 100, friction: 0, clamp: true },
+    from: { transform: "translateY(-100px)", opacity: 0 },
+    enter: { transform: "translateY(0px)", opacity: 1 },
     leave: { opacity: 0 },
   });
   const cameraTransition = useTransition(camera, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
+    config: { mass: 1, tension: 100, friction: 0, clamp: true },
+    from: { transform: "translateY(-100px)", opacity: 0 },
+    enter: { transform: "translateY(0px)", opacity: 1 },
     leave: { opacity: 0 },
   });
   const titleTransition = useTransition(title, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
+    config: { mass: 1, tension: 100, friction: 0, clamp: true },
+    from: { transform: "translateY(-100px)", opacity: 0 },
+    enter: { transform: "translateY(0px)", opacity: 1 },
     leave: { opacity: 0 },
   });
   return (
@@ -60,23 +63,20 @@ export default function Welcome(props) {
           ({ item, key, props }) =>
             item && (
               <animated.div key={key} style={props}>
-                {hunt ? (
-                  <div>
-                    <p>
-                      Looking for places where skateboard culture has marked its
-                      territory in various ways. Physical markings, waxed curbs,
-                      markings of transference. Looking for locations which
-                      posses attributes which have been codified into skate
-                      culture. Projecting my own personal image of skateboarding
-                      onto a place. Looking for disused and anomalous
-                      infrastructural corners in which I could imagine a
-                      skateboarder performing. Spaces society has provided
-                      explicitly for skateboarding. Examining the structure and
-                      visual identity of these spaces when approached from a
-                      purely aesthetic level.
-                    </p>
-                  </div>
-                ) : null}
+                <div>
+                  <p>
+                    Looking for places where skateboard culture has marked its
+                    territory in various ways. Physical markings, waxed curbs,
+                    markings of transference. Looking for locations which posses
+                    attributes which have been codified into skate culture.
+                    Projecting my own personal image of skateboarding onto a
+                    place. Looking for disused and anomalous infrastructural
+                    corners in which I could imagine a skateboarder performing.
+                    Spaces society has provided explicitly for skateboarding.
+                    Examining the structure and visual identity of these spaces
+                    when approached from a purely aesthetic level.
+                  </p>
+                </div>
               </animated.div>
             )
         )}
