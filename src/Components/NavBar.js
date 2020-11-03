@@ -23,6 +23,7 @@ import DicedRecord from "./Music/Diced";
 import ObjectDom from "./Music/ObjectLP";
 import Carrara from "./Photos/Carrara";
 import LaQuinta from "./Photos/LaQuinta";
+import Alaska from './Photos/Alaska';
 import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 
@@ -203,6 +204,11 @@ export default withRouter(function NavBar(props) {
               path="/laquinta"
               render={(props) => <LaQuinta {...props} nav={nav} />}
             />
+            <Route
+            exact
+            path="/alaska"
+            render={(props) => <Alaska {...props} nav={nav} />}
+          />
             <Route
               exact
               path="/mixes"

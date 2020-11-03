@@ -42,6 +42,13 @@ export default class Promenade extends Component {
             >
               <p>Purchase</p>
             </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://presentmoment.github.io/promenade/"
+            >
+              <p>Promotional Site</p>
+            </a> 
           </div>
         </div>
         {this.state.loading ? (

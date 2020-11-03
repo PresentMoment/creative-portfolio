@@ -16,6 +16,9 @@ class PhotosNav extends React.Component {
           <Link to="/laquinta">
             <li>La Quinta</li>
           </Link>
+          <Link to="/alaska">
+          <li>Alaska</li>
+        </Link>
         </ul>
       </div>
     );

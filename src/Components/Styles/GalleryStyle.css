@@ -166,11 +166,12 @@
 @media (orientation: landscape) {
   .image-gallery-content .image-gallery-slide .image-gallery-image {
     max-width: calc(100vw - 380px);
+    max-height: calc(100vh - 280px);
   }
 }
 .image-gallery-content.left .image-gallery-slide .image-gallery-image,
 .image-gallery-content.right .image-gallery-slide .image-gallery-image {
-  max-height: 100vh;
+  max-height: calc(100vh - 280px);
 }
 
 .image-gallery-slide-wrapper {
