@@ -46,7 +46,7 @@ export default class Alaska extends Component {
             <div style={{ flexGrow: 1 }} />
             <div style={{ marginTop: "auto" }}>
               <p>
-                In 2019 I moved to Alaska
+                In the spring of 2020 I gave up my home in Los Angeles and began living and working on a tender boat in Kodiak, Alaska.  I put aside questions of subjective specificity and embraced the ecstatic beauty and mystery of the place.
               </p>
             </div>
           </div>
