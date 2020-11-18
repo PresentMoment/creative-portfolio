@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Pdf from '@mikecousins/react-pdf';
 
 import baltz from '../../dapper.pdf'
@@ -6,6 +6,11 @@ import "../Styles/BaltzStyle.css";
 
 
 export default function Baltz(props) {
+  const [winSize, setWinSize] = useState("");
+
+  useEffect(() => {
+    window.innerWidth > 767 ? setWinSize("big") : setWinSize('smol')
+  }, [])
   return (
     <div className={props.nav ? "baltzScreen" : "baltz"}>
       <div className="baltz-text">
@@ -15,7 +20,7 @@ export default function Baltz(props) {
 
   </div>
       <div className="pdf-container">
-      <Pdf file={baltz} page={1} onPageLoadSuccess={console.log('load')}/>
+      <Pdf file={baltz} page={1} scale={winSize === 'smol' ? 0.5 : 1}/>
       </div>
       </div>
   )
