@@ -13,6 +13,9 @@ class WritingNav extends React.Component {
           <Link to="/guide">
             <li>Orange County Travel Guide</li>
           </Link>
+          <Link to="/baltz">
+            <li>On Baltz</li>
+          </Link>
         </ul>
       </div>
     );

@@ -26,6 +26,7 @@ import LaQuinta from "./Photos/LaQuinta";
 import Alaska from './Photos/Alaska';
 import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
+import Baltz from "./Writing/Baltz";
 
 export default withRouter(function NavBar(props) {
   const { location } = { ...props };
@@ -188,6 +189,11 @@ export default withRouter(function NavBar(props) {
               exact
               path="/guide"
               render={(props) => <Guide {...props} nav={nav} />}
+            />
+             <Route
+              exact
+              path="/baltz"
+              render={(props) => <Baltz {...props} nav={nav} />}
             />
             <Route
               exact

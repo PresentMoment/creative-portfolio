@@ -31,7 +31,8 @@
 @media (max-width: 600px) {
   .guide-text {
     text-align: right;
-    margin-right: 1em;
+    margin-right: 1rem;
+    padding-right: 1rem;
   }
 }
 
