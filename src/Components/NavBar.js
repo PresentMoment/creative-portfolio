@@ -23,7 +23,8 @@ import DicedRecord from "./Music/Diced";
 import ObjectDom from "./Music/ObjectLP";
 import Carrara from "./Photos/Carrara";
 import LaQuinta from "./Photos/LaQuinta";
-import Alaska from './Photos/Alaska';
+import Alaska from "./Photos/Alaska";
+import Diary from "./Photos/Diary";
 import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 import Baltz from "./Writing/Baltz";
@@ -190,7 +191,7 @@ export default withRouter(function NavBar(props) {
               path="/guide"
               render={(props) => <Guide {...props} nav={nav} />}
             />
-             <Route
+            <Route
               exact
               path="/baltz"
               render={(props) => <Baltz {...props} nav={nav} />}
@@ -211,10 +212,15 @@ export default withRouter(function NavBar(props) {
               render={(props) => <LaQuinta {...props} nav={nav} />}
             />
             <Route
-            exact
-            path="/alaska"
-            render={(props) => <Alaska {...props} nav={nav} />}
-          />
+              exact
+              path="/alaska"
+              render={(props) => <Alaska {...props} nav={nav} />}
+            />
+            <Route
+              exact
+              path="/diary"
+              render={(props) => <Diary {...props} nav={nav} />}
+            />
             <Route
               exact
               path="/mixes"
