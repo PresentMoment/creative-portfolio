@@ -29,9 +29,12 @@ import Promenade from "./Music/Promenade";
 import Mixes from "./Music/Mixes";
 import Baltz from "./Writing/Baltz";
 
+import useMediaQuery from "../Utils/useMediaQuery";
+
 export default withRouter(function NavBar(props) {
   const { location } = { ...props };
   const [nav, setNav] = useState(false);
+  const smallPhoneBreak = useMediaQuery(376);
   useEffect(() => {
     if (
       props.musicOpen ||
@@ -45,25 +48,30 @@ export default withRouter(function NavBar(props) {
     }
   }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history, location]);
 
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: {
-      position: "absolute",
-      width: "100%",
-      transform: "translateX(-100%)",
-    },
-    enter: {
-      position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
-      width: "100%",
-      transform: `${
-        location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
-      }`,
-    },
-    leave: {
-      position: "absolute",
-      width: "100%",
-      transform: "translateX(100%)",
-    },
-  });
+  const transitions = useTransition(
+    location,
+    smallPhoneBreak,
+    (location) => location.pathname,
+    {
+      from: {
+        position: "absolute",
+        width: "100%",
+        transform: "translateX(-100%)",
+      },
+      enter: {
+        position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
+        width: `${smallPhoneBreak ? "97.8%" : "99%"}`,
+        transform: `${
+          location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
+        }`,
+      },
+      leave: {
+        position: "absolute",
+        width: "100%",
+        transform: "translateX(100%)",
+      },
+    }
+  );
 
   return (
     <div>

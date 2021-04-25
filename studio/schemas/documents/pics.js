@@ -13,7 +13,7 @@ export default {
       name: "picture",
       type: "image",
       options: {
-        hotspot: true, // <-- Defaults to false
+        hotspot: true,
       },
     },
   ],

@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
+import "./Styles/ModalStyle.css";
+
 export default function Modal({ setModal, handleKeyDown, show, children }) {
   const containerRef = useRef(null);
   useEffect(() => {
@@ -7,6 +9,13 @@ export default function Modal({ setModal, handleKeyDown, show, children }) {
       containerRef.current.focus();
     }
   }, [show]);
+  const handleClick = (e) => {
+    if (e.target.id === "overlay") {
+      setModal(false);
+    } else {
+      return;
+    }
+  };
   return (
     <div
       ref={containerRef}
@@ -14,21 +23,19 @@ export default function Modal({ setModal, handleKeyDown, show, children }) {
         handleKeyDown(e.key);
       }}
       tabIndex="0"
-      onClick={() => setModal(!show)}
     >
       <div
+        className="Overlay"
         style={{
           display: show ? "block" : "none",
           position: "fixed",
-          top: 0,
-          left: 0,
-          width: "50%",
-          height: "100vh",
           background: "rgba(0, 0, 0, 0.6)",
-          marginLeft: "20vw",
+          textAlign: "center",
         }}
+        id="overlay"
+        onClick={(e) => handleClick(e)}
       >
-        <section className="modal-main">{children}</section>
+        <div className="Container">{children}</div>
       </div>
     </div>
   );
