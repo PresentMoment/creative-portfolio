@@ -74,60 +74,67 @@ export default withRouter(function NavBar(props) {
   );
 
   return (
-    <div>
+    <>
       <div className="topNav">
         <div
           onClick={() => {
             props.toggleMusic();
           }}
+          className="navLink"
         >
-          <p id="music">Music</p>
+          <span id="music">Music</span>
           {props.musicOpen ? <MusicNav /> : null}
         </div>
         <div
           onClick={() => {
             props.toggleVideos();
           }}
+          className="navLink"
         >
-          <p id="videos">Videos</p>
+          <span id="videos">Videos</span>
           {props.videosOpen ? <VideoNav /> : null}
         </div>
         <div
           onClick={() => {
             props.togglePhotos();
           }}
+          className="navLink"
         >
-          <p id="photos">Photos</p>
+          <span id="photos">Photos</span>
           {props.photosOpen ? <PhotosNav /> : null}
         </div>
         <div
           onClick={() => {
             props.toggleWriting();
           }}
+          className="navLink"
         >
-          <p id="writing">Writing</p>
+          <span id="writing">Writing</span>
           {props.writingOpen ? <WritingNav /> : null}
         </div>
         <div
           onClick={() => {
             setNav(false);
           }}
+          className="navLink"
         >
           <Link to="/contact">
-            <p>Contact</p>
+            <span>Contact</span>
           </Link>
         </div>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.instagram.com/our_girardin/"
-        >
-          <p>Instagram</p>
-        </a>
+        <div className="navLink">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/our_girardin/"
+          >
+            <span>Instagram</span>
+          </a>
+        </div>
       </div>
       <div className="navSpacer" />
       {transitions.map(({ item, props }) => (
-        <animated.div key={item.key} style={props} className="aniDiv">
+        <animated.div style={props} className="aniDiv">
           <Switch location={item}>
             <Route
               exact
@@ -237,6 +244,6 @@ export default withRouter(function NavBar(props) {
           </Switch>
         </animated.div>
       ))}
-    </div>
+    </>
   );
 });

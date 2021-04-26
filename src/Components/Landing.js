@@ -6,12 +6,12 @@ export default class Landing extends Component {
     return (
       <div>
         <div className="nameTag">
-          <h3 id={this.props.nav ? "tagAfter" : "tagBefore"}>
+          <span id={this.props.nav ? "tagAfter" : "tagBefore"}>
             is a musician, film maker and writer living in NYC
-          </h3>
+          </span>
         </div>
         <div className={this.props.nav ? "nameAfter" : "name"}>
-          <h1>RobertGirardin</h1>
+          <span>RobertGirardin</span>
         </div>
       </div>
     );

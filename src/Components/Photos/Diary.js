@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import imageUrlBuilder from "@sanity/image-url";
+import { useSwipeable } from "react-swipeable";
 
 import useMediaQuery from "../../Utils/useMediaQuery";
 import client from "../../client";
@@ -51,6 +52,16 @@ export default function Diary(props) {
         return null;
     }
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      setModalImage((prevState) => prevState + 1);
+    },
+    onSwipedRight: () => {
+      setModalImage((prevState) => prevState - 1);
+    },
+  });
+
   return (
     <div className={props.nav ? "photosScreen" : "photos"}>
       {photos[modalImage] !== undefined ? (
@@ -70,6 +81,7 @@ export default function Diary(props) {
                 alignItems: "center",
                 height: "100%",
               }}
+              {...handlers}
             >
               {modalImage > 0 && !fullSizeBreak ? (
                 <span
@@ -91,8 +103,8 @@ export default function Diary(props) {
                 src={builder
                   .image(photos[modalImage].picture)
                   .auto("format")
-                  .width(fullSizeBreak ? 250 : 500)
-                  .height(fullSizeBreak ? 350 : 700)
+                  .width(fullSizeBreak ? 320 : 500)
+                  .height(fullSizeBreak ? 450 : 700)
                   .format("webp")
                   .url()}
                 alt={""}
@@ -137,8 +149,8 @@ export default function Diary(props) {
               src={builder
                 .image(pic.picture)
                 .auto("format")
-                .width(smallPhoneBreak ? 200 : thumbnailBreak ? 150 : 200)
-                .height(smallPhoneBreak ? 200 : thumbnailBreak ? 150 : 200)
+                .width(smallPhoneBreak ? 360 : thumbnailBreak ? 190 : 230)
+                .height(smallPhoneBreak ? 360 : thumbnailBreak ? 190 : 230)
                 .format("webp")
                 .url()}
               alt={""}

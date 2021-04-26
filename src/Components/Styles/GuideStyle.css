@@ -26,7 +26,7 @@
 }
 
 .guide-text {
-  margin-left: 5em;
+  margin-left: 0;
 }
 @media (max-width: 600px) {
   .guide-text {

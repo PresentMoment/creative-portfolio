@@ -11,7 +11,7 @@
 
 @media (max-width: 790px) {
   .photosContainer {
-    margin-left: 5em;
+    margin-left: 0;
   }
 }
 .image-gallery-icon {

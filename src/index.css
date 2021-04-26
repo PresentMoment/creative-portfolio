@@ -47,12 +47,12 @@
 @media (max-width: 790px) {
   .topNav {
     position: fixed;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 16px;
     line-height: 0.2rem;
     margin: 0;
-    width: 10vw;
-    padding-top: 0.5rem;
+    width: 97vw;
+    height: 40px;
   }
 }
 
@@ -60,6 +60,10 @@
   color: #000000;
 }
 
+.navLink {
+  height: 40px;
+  padding-top: 1.5rem;
+}
 .navSpacer {
   width: 100%;
   height: 50px;
@@ -68,7 +72,7 @@
 @media (max-width: 790px) {
   .navSpacer {
     width: 100%;
-    height: 20px;
+    height: 40px;
   }
 }
 
@@ -92,7 +96,7 @@
 
 .navUL {
   list-style-type: none;
-  padding: 0;
+  padding: 1rem 0;
   font-size: 15px;
   flex-direction: column;
   margin: 0;
@@ -106,7 +110,6 @@
   .navUL {
     display: block;
     flex-direction: row;
-    margin-left: 45%;
     margin-top: 0;
     flex-wrap: wrap;
     width: 50vw;
@@ -118,11 +121,6 @@
 
 .navULContainer {
   position: absolute;
-}
-@media (max-width: 790px) {
-  .navULContainer {
-    top: 0;
-  }
 }
 
 @keyframes rotation {
@@ -136,14 +134,14 @@
 
 .video {
   margin: 0 auto;
-  margin-left: 5em;
+  margin-left: 0;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
 }
 
 .videoScreen {
   margin: 0 auto;
-  margin-left: 5em;
+  margin-left: 0;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
@@ -157,13 +155,13 @@
 @media (max-width: 730px) {
   .contact {
     font-size: 1rem;
-    margin-left: 5em;
+    margin-left: 0;
   }
 }
 
 .contactScreen {
   margin-top: 5%;
-  margin-left: 5em;
+  margin-left: 0;
   opacity: 0.06;
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
@@ -180,4 +178,29 @@
 
 .videoPlayer > div {
   position: relative;
+}
+
+.videoPlayer {
+  width: 97vw !important;
+  height: 28vh !important;
+}
+@media (max-width: 768px) {
+  .videoPlayer {
+    height: 27vh !important;
+  }
+}
+@media (max-width: 375px) {
+  .videoPlayer {
+    height: 24vh !important;
+  }
+}
+@media (max-width: 320px) {
+  .videoPlayer {
+    height: 20vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .videoPlayer {
+    height: 65vh !important;
+  }
 }

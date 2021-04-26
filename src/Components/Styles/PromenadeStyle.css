@@ -16,7 +16,7 @@
 @media (max-width: 790px) {
   .promenade-container {
     flex-direction: column;
-    margin-left: 5em;
+    margin-left: 0;
   }
 }
 

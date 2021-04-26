@@ -26,7 +26,7 @@
 }
 
 .baltz-text {
-  margin-left: 5em;
+  margin-left: 0;
 }
 @media (max-width: 600px) {
   .baltz-text {
@@ -39,7 +39,7 @@
 .pdf-container {
   position: relative;
   height: 100%;
-  margin-left: 5em;
+  margin-left: 0;
 }
 @media (max-width: 425px) {
   .pdf-container {
