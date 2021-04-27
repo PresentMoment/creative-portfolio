@@ -48,30 +48,23 @@ export default withRouter(function NavBar(props) {
     }
   }, [props.musicOpen, props.videosOpen, props.photosOpen, props.writingOpen, props.history, location]);
 
-  const transitions = useTransition(
-    location,
-    smallPhoneBreak,
-    (location) => location.pathname,
-    {
-      from: {
-        position: "absolute",
-        width: "100%",
-        transform: "translateX(-100%)",
-      },
-      enter: {
-        position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
-        width: `${smallPhoneBreak ? "97.8%" : "99%"}`,
-        transform: `${
-          location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
-        }`,
-      },
-      leave: {
-        position: "absolute",
-        width: "100%",
-        transform: "translateX(100%)",
-      },
-    }
-  );
+  const transitions = useTransition(location, (location) => location.pathname, {
+    from: {
+      position: "absolute",
+      transform: "translateX(-100%)",
+    },
+    enter: {
+      position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
+      width: "97%",
+      transform: `${
+        location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
+      }`,
+    },
+    leave: {
+      position: "absolute",
+      transform: "translateX(100%)",
+    },
+  });
 
   return (
     <>
@@ -134,7 +127,7 @@ export default withRouter(function NavBar(props) {
       </div>
       <div className="navSpacer" />
       {transitions.map(({ item, props }) => (
-        <animated.div style={props} className="aniDiv">
+        <animated.div key={item.key} style={props} className="aniDiv">
           <Switch location={item}>
             <Route
               exact

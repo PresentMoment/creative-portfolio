@@ -95,7 +95,7 @@ export default function Diary(props) {
                 <span
                   style={{
                     padding: "40px 33px",
-                    display: smallPhoneBreak ? "none" : "block",
+                    display: fullSizeBreak ? "none" : "block",
                   }}
                 ></span>
               )}
@@ -128,7 +128,7 @@ export default function Diary(props) {
                 <span
                   style={{
                     padding: "40px 33px",
-                    display: smallPhoneBreak ? "none" : "block",
+                    display: fullSizeBreak ? "none" : "block",
                   }}
                 ></span>
               )}
@@ -149,8 +149,8 @@ export default function Diary(props) {
               src={builder
                 .image(pic.picture)
                 .auto("format")
-                .width(smallPhoneBreak ? 360 : thumbnailBreak ? 190 : 230)
-                .height(smallPhoneBreak ? 360 : thumbnailBreak ? 190 : 230)
+                .width(smallPhoneBreak ? 300 : thumbnailBreak ? 190 : 230)
+                .height(smallPhoneBreak ? 300 : thumbnailBreak ? 190 : 230)
                 .format("webp")
                 .url()}
               alt={""}
