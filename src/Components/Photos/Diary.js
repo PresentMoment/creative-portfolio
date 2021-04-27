@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 import { useSwipeable } from "react-swipeable";
 
@@ -11,6 +11,7 @@ export default function Diary(props) {
   const [photos, setPhotos] = useState([]);
   const [showModal, setModal] = useState(false);
   const [modalImage, setModalImage] = useState(1);
+  const [isImgLoaded, setImgLoaded] = useState(false);
 
   const builder = imageUrlBuilder(client);
 
@@ -28,6 +29,8 @@ export default function Diary(props) {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const picRef = useRef();
 
   const handleKeyDown = (e) => {
     switch (e) {
@@ -61,7 +64,6 @@ export default function Diary(props) {
       setModalImage((prevState) => prevState - 1);
     },
   });
-
   return (
     <div className={props.nav ? "photosScreen" : "photos"}>
       {photos[modalImage] !== undefined ? (
@@ -72,6 +74,7 @@ export default function Diary(props) {
         >
           <div
             style={{ display: "flex", flexDirection: "column", width: "100%" }}
+            ref={picRef}
           >
             <div
               style={{
@@ -99,21 +102,29 @@ export default function Diary(props) {
                   }}
                 ></span>
               )}
+              {!isImgLoaded && (
+                <span style={{ fontSize: "12px" }}>...Loading</span>
+              )}
               <img
                 src={builder
                   .image(photos[modalImage].picture)
                   .auto("format")
-                  .width(fullSizeBreak ? 320 : 500)
+                  .width(fullSizeBreak ? 321 : 500)
                   .height(fullSizeBreak ? 450 : 700)
-                  .format("webp")
+                  .quality(100)
+                  .dpr(1)
                   .url()}
                 alt={""}
                 onClick={() => {
                   setModal(!showModal);
+                  setImgLoaded(false);
+                }}
+                onLoad={() => {
+                  setImgLoaded(true);
                 }}
                 className="modalImage"
                 style={{
-                  border: "5px solid white",
+                  border: isImgLoaded ? "5px solid white" : "none",
                 }}
               />
               {modalImage !== photos.length - 1 && !fullSizeBreak ? (
@@ -158,6 +169,8 @@ export default function Diary(props) {
               onClick={() => {
                 setModal(!showModal);
                 setModalImage(index);
+                picRef.current.focus();
+                window.scrollTo(0, 0);
               }}
             />
           );

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "http://www.robertgirardin.net/precache-manifest.73f2a85d53bd45f78b4bac5f64b01417.js"
+  "http://www.robertgirardin.net/precache-manifest.4fe5807702fb90e27aead79b61f4e633.js"
 );
 
 self.addEventListener('message', (event) => {
