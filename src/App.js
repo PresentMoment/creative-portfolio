@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import NavBar from "./Components/NavBar";
@@ -33,6 +33,29 @@ export default function App() {
     setPhotos(false);
   };
 
+  let contentPosition = {};
+  const [isScrolling, setScrolling] = useState(false);
+  const handleScroll = () => {
+    contentPosition = document.body.getBoundingClientRect();
+    if (contentPosition.top < 8) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!isScrolling) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolling]);
+
   return (
     <Router>
       <NavBar
@@ -44,6 +67,7 @@ export default function App() {
         togglePhotos={togglePhotos}
         writingOpen={writing}
         toggleWriting={toggleWriting}
+        isScrolling={isScrolling}
       />
     </Router>
   );

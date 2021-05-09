@@ -12,6 +12,8 @@ export default function Diary(props) {
   const [showModal, setModal] = useState(false);
   const [modalImage, setModalImage] = useState(1);
   const [isImgLoaded, setImgLoaded] = useState(false);
+  const [offset, setOffset] = useState(null);
+  const [imgID, setimgID] = useState("");
 
   const builder = imageUrlBuilder(client);
 
@@ -26,11 +28,22 @@ export default function Diary(props) {
     setPhotos(result);
   }
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const picRef = useRef();
+  const gridRef = useRef();
+  const winRef = useRef();
+
+  useEffect(() => {
+    if (document.getElementsByClassName("photos")[0]) {
+      winRef.current = document.getElementsByClassName(
+        "photos"
+      )[0].clientHeight;
+    }
+    picRef.current && picRef.current.scrollIntoView({ block: "center" });
+
+    if (photos.length < 1) {
+      fetchData();
+    }
+  }, [modalImage]);
 
   const handleKeyDown = (e) => {
     switch (e) {
@@ -63,6 +76,10 @@ export default function Diary(props) {
     onSwipedRight: () => {
       setModalImage((prevState) => prevState - 1);
     },
+    onSwipedUp: () => {
+      setModal(!showModal);
+      setImgLoaded(false);
+    },
   });
   return (
     <div className={props.nav ? "photosScreen" : "photos"}>
@@ -73,7 +90,15 @@ export default function Diary(props) {
           handleKeyDown={handleKeyDown}
         >
           <div
-            style={{ display: "flex", flexDirection: "column", width: "100%" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100%",
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
             ref={picRef}
           >
             <div
@@ -118,6 +143,9 @@ export default function Diary(props) {
                 onClick={() => {
                   setModal(!showModal);
                   setImgLoaded(false);
+                  document
+                    .getElementById(`${imgID}`)
+                    .scrollIntoView({ block: "center" });
                 }}
                 onLoad={() => {
                   setImgLoaded(true);
@@ -153,8 +181,9 @@ export default function Diary(props) {
           </div>
         </Modal>
       ) : null}
-      <div className="photo-grid">
+      <div className="photo-grid" ref={gridRef}>
         {photos.map((pic, index) => {
+          const childrens = Array.from(gridRef.current.children);
           return (
             <img
               src={builder
@@ -166,11 +195,13 @@ export default function Diary(props) {
                 .url()}
               alt={""}
               key={pic._id}
+              id={pic._id}
               onClick={() => {
                 setModal(!showModal);
                 setModalImage(index);
                 picRef.current.focus();
-                window.scrollTo(0, 0);
+                setOffset(childrens[index].offsetTop);
+                setimgID(pic._id);
               }}
             />
           );

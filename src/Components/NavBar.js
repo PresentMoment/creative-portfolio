@@ -55,7 +55,7 @@ export default withRouter(function NavBar(props) {
     },
     enter: {
       position: `${location.pathname === "/blanche" ? "fixed" : "absolute"}`,
-      width: "97%",
+      width: `${!smallPhoneBreak ? "99.5%" : "99%"}`,
       transform: `${
         location.pathname === "/blanche" ? "translateX(-10)" : "translateX(0)"
       }`,
@@ -68,7 +68,7 @@ export default withRouter(function NavBar(props) {
 
   return (
     <>
-      <div className="topNav">
+      <div id={props.isScrolling ? "navScroll" : null} className="topNav">
         <div
           onClick={() => {
             props.toggleMusic();
@@ -128,113 +128,115 @@ export default withRouter(function NavBar(props) {
       <div className="navSpacer" />
       {transitions.map(({ item, props }) => (
         <animated.div key={item.key} style={props} className="aniDiv">
-          <Switch location={item}>
-            <Route
-              exact
-              path="/"
-              render={(props) => <Landing {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/promenade"
-              render={(props) => <Promenade {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/emmusic"
-              render={(props) => <EMMusic {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/stress"
-              render={(props) => <Stress {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/keys"
-              render={(props) => <Keys {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/dicedrecord"
-              render={(props) => <DicedRecord {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/objectdom"
-              render={(props) => <ObjectDom {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/butw"
-              render={(props) => <BUTW {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/blanche"
-              render={(props) => <Blanche {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/diced"
-              render={(props) => <Diced {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/mooc"
-              render={(props) => <Monuments {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/wth"
-              render={(props) => <Welcome {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/white"
-              render={(props) => <White {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/guide"
-              render={(props) => <Guide {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/baltz"
-              render={(props) => <Baltz {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/contact"
-              render={(props) => <Contact {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/apuana"
-              render={(props) => <Carrara {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/laquinta"
-              render={(props) => <LaQuinta {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/alaska"
-              render={(props) => <Alaska {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/diary"
-              render={(props) => <Diary {...props} nav={nav} />}
-            />
-            <Route
-              exact
-              path="/mixes"
-              render={(props) => <Mixes {...props} nav={nav} />}
-            />
-          </Switch>
+          <div style={{ marginLeft: "8px" }}>
+            <Switch location={item}>
+              <Route
+                exact
+                path="/"
+                render={(props) => <Landing {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/promenade"
+                render={(props) => <Promenade {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/emmusic"
+                render={(props) => <EMMusic {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/stress"
+                render={(props) => <Stress {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/keys"
+                render={(props) => <Keys {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/dicedrecord"
+                render={(props) => <DicedRecord {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/objectdom"
+                render={(props) => <ObjectDom {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/butw"
+                render={(props) => <BUTW {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/blanche"
+                render={(props) => <Blanche {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/diced"
+                render={(props) => <Diced {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/mooc"
+                render={(props) => <Monuments {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/wth"
+                render={(props) => <Welcome {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/white"
+                render={(props) => <White {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/guide"
+                render={(props) => <Guide {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/baltz"
+                render={(props) => <Baltz {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/contact"
+                render={(props) => <Contact {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/apuana"
+                render={(props) => <Carrara {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/laquinta"
+                render={(props) => <LaQuinta {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/alaska"
+                render={(props) => <Alaska {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/diary"
+                render={(props) => <Diary {...props} nav={nav} />}
+              />
+              <Route
+                exact
+                path="/mixes"
+                render={(props) => <Mixes {...props} nav={nav} />}
+              />
+            </Switch>
+          </div>
         </animated.div>
       ))}
     </>

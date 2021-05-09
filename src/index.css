@@ -9,6 +9,10 @@
   font-family: "Cormorant", serif;
 }
 
+body {
+  margin: 0;
+}
+
 .header {
   cursor: pointer;
   border: solid 1px #f2f2f2;
@@ -35,7 +39,7 @@
   color: #000000;
   font-family: "Cormorant", serif;
   font-size: 30px;
-  margin: -25px 0px 0px 10px;
+  margin: -25px 0px 8px 10px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -50,21 +54,27 @@
     flex-direction: row;
     font-size: 16px;
     line-height: 0.2rem;
-    margin: -15px 0px 0px 10px;
+    margin: -15px 0px 8px 0px;
     width: 90%;
     height: 40px;
   }
 }
 @media (max-width: 375px) {
   .topNav {
-    width: 80vw;
+    width: 90vw;
     font-size: 12px;
-    margin: -15px 0px 0px 0px;
+    margin: -15px 0px 8px 0px;
   }
 }
 
 .topNav a:visited {
   color: #000000;
+}
+
+#navScroll {
+  text-shadow: -0.5px -0.5px 0 rgba(255, 255, 255, 0.3),
+    1px -1px 0 rgb(255, 255, 255, 0.3), -0.5px 0.5px 0 rgb(255, 255, 255, 0.3),
+    1px 1px 0 rgb(255, 255, 255, 0.3);
 }
 
 .navLink {
